@@ -1,6 +1,6 @@
 {
-  "name": "Dark Retriet",
-  "short_name": "Dark Retriet",
+  "name": "ID Маркетинг",
+  "short_name": "ID Маркетинг",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#6D6662",
-  "background_color": "6D6662",
+  "theme_color": "#0F141E",
+  "background_color": "#0F141E",
   "display": "standalone"
 }
