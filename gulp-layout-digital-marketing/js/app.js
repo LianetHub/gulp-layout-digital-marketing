@@ -70,6 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.header').classList.toggle('open-menu');
     }
 
+    // promo video controls
+    const video = document.getElementById('promo-video');
+
+    video.addEventListener('click', () => {
+        video.muted = false;
+        video.controls = true;
+
+        setTimeout(() => {
+            video.play();
+        }, 0);
+    });
+
     // Инициализация слайдеров
     if (document.querySelector('.complex__slider')) {
         new Swiper('.complex__slider', {
@@ -201,20 +213,44 @@ document.addEventListener("DOMContentLoaded", () => {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 992px)", () => {
-        gsap.to(".promo__video", {
-            x: 12,
-            y: 80,
-            top: "50vh",
-            width: "100vw",
+        // Инициализация анимации
+        const animation = gsap.to(".promo__video-wrapper .video-area", {
+            y: 620,
+            width: () => `${window.innerWidth - 90}px`,
             height: "80vh",
+            x: () => {
+                const vw = window.innerWidth;
+                const bodyWidth = document.querySelector('.promo__body').offsetWidth;
+                return ((vw - bodyWidth) / 2) - 30;
+            },
+            ease: "power2.out",
             scrollTrigger: {
-                trigger: ".promo__body",
-                start: "top 20%",
+                trigger: ".promo__video-wrapper",
+                start: () => `top ${document.querySelector('.header').offsetHeight}`,
                 end: "bottom top",
-                scrub: 2,
+                scrub: 3,
+                // markers: true
             }
         });
+
+        ScrollTrigger.addEventListener("refreshInit", () => {
+            animation.invalidate();
+        });
+
+
+        window.addEventListener("resize", () => {
+            ScrollTrigger.refresh();
+        });
+
+        return () => {
+            window.removeEventListener("resize", () => {
+                ScrollTrigger.refresh();
+            });
+            animation.scrollTrigger.kill();
+            animation.kill();
+        };
     });
+
 
 })
 
