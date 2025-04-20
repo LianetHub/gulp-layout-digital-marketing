@@ -213,7 +213,10 @@ body {
 	&__btn {
 	}
 	&__video {
+		margin-top: rem(20);
+	
 		@media (min-width: $md3) {
+			margin-top: 0;
 			flex: 0 0 50%;
 			width: 50%;
 			padding-right: rem(12);
@@ -232,13 +235,18 @@ body {
 			margin-left: auto;
 			transition: width 0.3s ease-out, position 0.3s ease;
 			direction: rtl;
+			max-width: 29.25rem;
+		}
+		@media (min-width:$md2) {
 			max-width: 31.25rem;
+		
 		}
 		.video-area {
 			height: 100%;
 			@media (max-width: $md3) {
 				transform: none !important;
 				width: 100% !important;
+				height: 100% !important;
 			}
 			& video {
 				border-radius: rem(20);

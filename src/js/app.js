@@ -74,6 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById('promo-video');
 
     video.addEventListener('click', () => {
+        video.removeAttribute('muted');
+        video.removeAttribute('autoplay');
+        video.removeAttribute('playsinline');
+        video.removeAttribute('controls');
+        
         video.muted = false;
         video.controls = true;
 
@@ -246,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.removeEventListener("resize", () => {
                 ScrollTrigger.refresh();
             });
-            animation.scrollTrigger.kill();
+            animation.scrollTrigger?.kill();
             animation.kill();
         };
     });
