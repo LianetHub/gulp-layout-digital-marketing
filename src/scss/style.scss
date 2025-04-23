@@ -65,27 +65,6 @@ body {
 			overflow: visible;
 		}
 	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(15, 20, 30, 0.4);
-		backdrop-filter: blur(12.5px);
-		-webkit-backdrop-filter: blur(12.5px);
-		z-index: 2;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
-	}
-	&:has(.header.open-menu) {
-		&::before {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
 }
 // ==================ОБОЛОЧКА==============================
 .wrapper {
@@ -122,6 +101,13 @@ body {
 	@media (min-width: $md2) {
 		max-width: $maxWidthContainer;
 	}
+	&.container-lg {
+		box-sizing: border-box;
+		max-width: rem(2320);
+		@media (min-width: $md1) {
+			padding: 0 rem(120);
+		}
+	}
 }
 
 //=============== ОСНОВНАЯ СЕТКА===============================
@@ -151,14 +137,22 @@ body {
 		min-height: 100vh;
 		margin-bottom: calc(80vh - rem(200));
 	}
+	display: flex;
+	flex-direction: column;
 	// .promo__container
 	&__container {
+		flex: 1 1 auto;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 	}
 	// .promo__body
 	&__body {
 		display: contents;
+		&.scrolled {
+			// margin-bottom: 0;
+		}
+		transition: margin-bottom 0.3s ease;
 		@media (min-width: $md5) {
 			display: flex;
 			flex-direction: column;
@@ -168,8 +162,10 @@ body {
 			position: relative;
 			justify-content: space-between;
 			flex-direction: row;
+			align-items: flex-start;
 			margin-left: rem(-12);
 			margin-right: rem(-12);
+			margin-bottom: auto;
 		}
 	}
 	// .promo__offer
@@ -212,9 +208,9 @@ body {
 	// .promo__btn
 	&__btn {
 	}
+	// .promo__video
 	&__video {
 		margin-top: rem(20);
-	
 		@media (min-width: $md3) {
 			margin-top: 0;
 			flex: 0 0 50%;
@@ -237,9 +233,16 @@ body {
 			direction: rtl;
 			max-width: 29.25rem;
 		}
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			max-width: 31.25rem;
-		
+		}
+		@media (min-width: 1599.98px) {
+			max-width: rem(963);
+			height: rem(632);
+		}
+		@media (min-width: 2000px) {
+			max-width: rem(1337);
+			height: rem(876);
 		}
 		.video-area {
 			height: 100%;
@@ -257,6 +260,12 @@ body {
 				object-fit: cover;
 				display: block;
 				cursor: pointer;
+				@media (min-width: 1599.98px) {
+					min-height: rem(632);
+				}
+				@media (min-width: 2000px) {
+					min-height: rem(876);
+				}
 				@media (min-width: $md3) {
 					@media (max-width: $md2) {
 						min-height: rem(250);
@@ -277,31 +286,7 @@ body {
 		// 	border-radius: 0.625rem;
 		// }
 	}
-	// .promo__video-wrapper
-	// &__video-wrapper {
-	// 	max-width: 100%;
-	// 	border-radius: 0.625rem;
 
-	// 	order: 1;
-	// 	margin-top: 1.25rem;
-	// 	@media (min-width: $md5) {
-	// 		margin-top: 0;
-	// 	}
-	// 	@media (min-width: $md3) {
-	// 		position: absolute;
-	// 		z-index: 2;
-	// 		right: 0;
-	// 		aspect-ratio: math.div(31.25, 23.125);
-	// 		width: 31.25rem;
-	// 	}
-	// 	& video {
-	// 		max-width: 100%;
-	// 		height: 100%;
-	// 		width: 100%;
-	// 		object-fit: cover;
-	// 		border-radius: 0.625rem;
-	// 	}
-	// }
 	// .promo__list
 	&__list {
 		border-top: rem(1) solid rgba(255, 255, 255, 0.2);
@@ -798,7 +783,7 @@ body {
 	// .cases__title
 	&__title {
 		@media (min-width: $md3) {
-			width: fit-content;
+			width: rem(310);
 		}
 		& span {
 			display: inline-block;
@@ -1110,8 +1095,19 @@ body {
 	&__title {
 		max-width: rem(610);
 		& span {
+			position: relative;
+			display: inline-block;
 			white-space: nowrap;
-			background: url("@img/partners-title-decor.svg") center / contain no-repeat;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1.5%;
+				width: 103%;
+				height: 100%;
+				z-index: -1;
+				background: url("@img/partners-title-decor.svg") center / contain no-repeat;
+			}
 		}
 	}
 	// .team__body

@@ -43,6 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleMenu();
         }
 
+        if (e.target.matches('.header.open-menu')) {
+            document.body.classList.remove('lock');
+            document.querySelector('.header').classList.remove('open-menu');
+        }
+
+        if (e.target.matches('.menu__link') && document.querySelector('.header').classList.contains('open-menu')) {
+            document.body.classList.remove('lock');
+            document.querySelector('.header').classList.remove('open-menu');
+        }
+
         // Табы
         const tabBtn = e.target.closest('.cases__tab-btn');
         if (tabBtn) {
@@ -78,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         video.removeAttribute('autoplay');
         video.removeAttribute('playsinline');
         video.removeAttribute('controls');
-        
+
         video.muted = false;
         video.controls = true;
 
@@ -218,6 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 992px)", () => {
+        const promoBody = document.querySelector('.promo__body');
+
         // Инициализация анимации
         const animation = gsap.to(".promo__video-wrapper .video-area", {
             y: 620,
@@ -225,16 +237,18 @@ document.addEventListener("DOMContentLoaded", () => {
             height: "80vh",
             x: () => {
                 const vw = window.innerWidth;
-                const bodyWidth = document.querySelector('.promo__body').offsetWidth;
+                const bodyWidth = promoBody.offsetWidth;
                 return ((vw - bodyWidth) / 2) - 30;
             },
             ease: "power2.out",
             scrollTrigger: {
                 trigger: ".promo__video-wrapper",
                 start: () => `top ${document.querySelector('.header').offsetHeight}`,
-                end: "bottom top",
+                end: `${document.querySelector('.promo__offer').offsetHeight} top`,
                 scrub: 3,
-                // markers: true
+                // markers: true,
+                onEnter: () => promoBody.classList.add('scrolled'),
+                onLeaveBack: () => promoBody.classList.remove('scrolled'),
             }
         });
 
