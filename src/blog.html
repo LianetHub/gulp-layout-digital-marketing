@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Страница статьи'
+    })
+    <body class="light-bg">
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "background": "light"
+            })
+            <main class="page">
+                <section class="blog">
+                    <div class="blog__container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__list-item">
+                                    <a href="/" class="breadcrumbs__list-link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__list-item">
+                                    <a class="breadcrumbs__list-link active">Блог</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h2 class="blog__title title-lg">Блог о маркетинге</h2>
+                        <p class="blog__subtitle">Делимся своими знаниями в области продвижения бизнеса</p>
+                        <div class="blog__filters">
+                            <a href="" class="blog__filter">CRM</a>
+                            <a href="" class="blog__filter">SMM-продвижение</a>
+                            <a href="" class="blog__filter">SEO</a>
+                            <a href="" class="blog__filter">Аналитика</a>
+                            <a href="" class="blog__filter">Яндекс.Директ</a>
+                            <a href="" class="blog__filter">Советы</a>
+                            <a href="" class="blog__filter">КОнверсии</a>
+                            <a href="" class="blog__filter">Сервисы</a>
+                        </div>
+                        <ul class="blog__list">
+                            <li class="blog__item">
+                                <a href="" class="blog__card blog__card--dark">
+                                    <span class="blog__card-header">
+                                        <span class="blog__card-image">
+                                            <img src="@img/blog/01.svg" alt="icon">
+                                        </span>
+                                        <span class="blog__card-column">
+                                            <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                            <span class="blog__card-category">#сервисы</span>
+                                        </span>
+                                    </span>
+                                    <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__card">
+                                    <span class="blog__card-header">
+                                        <span class="blog__card-image blog__card-image--offset">
+                                            <img src="@img/blog/02.svg" alt="icon">
+                                        </span>
+                                        <span class="blog__card-column">
+                                            <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                            <span class="blog__card-category">#сервисы</span>
+                                        </span>
+                                    </span>
+                                    <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__card">
+                                    <span class="blog__card-header">
+                                        <span class="blog__card-image blog__card-image--offset">
+                                            <img src="@img/blog/02.svg" alt="icon">
+                                        </span>
+                                        <span class="blog__card-column">
+                                            <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                            <span class="blog__card-category">#сервисы</span>
+                                        </span>
+                                    </span>
+                                    <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                                </a>
+                            </li>
+                            <li class="blog__item">
+                                <a href="" class="blog__card blog__card--violet">
+                                    <span class="blog__card-header">
+                                        <span class="blog__card-image">
+                                            <img src="@img/blog/01.svg" alt="icon">
+                                        </span>
+                                        <span class="blog__card-column">
+                                            <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                            <span class="blog__card-category">#сервисы</span>
+                                        </span>
+                                    </span>
+                                    <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                @@include('html/_lids.html', {
+                "hasDecor": false
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+
+            @@include('html/_js.html', {})
+    </body>
+</html>

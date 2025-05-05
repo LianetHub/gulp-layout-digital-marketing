@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="share.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="49.208333"
+     inkscape:cx="11.989839"
+     inkscape:cy="12"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     style="color:#000000;fill:#9fa1a5;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+     d="M 13.546875,3.0761719 A 1.0001,1.0001 0 0 0 12.927734,4 v 3.1816406 c -0.33457,-0.033824 -0.657116,-0.1113281 -1,-0.1113281 -5.510986,0 -9.9999996,4.4890585 -9.9999996,9.9999995 0,0.961817 0.1378858,1.894751 0.3925781,2.777344 a 1.0001,1.0001 0 0 0 1.921875,0 c 0.9620162,-3.333854 4.0285907,-5.777343 7.6855465,-5.777343 0.344283,0 0.667972,0.06934 1,0.111328 v 3.960937 a 1.0001,1.0001 0 0 0 1.708985,0.707031 l 7.070312,-7.072265 a 1.0001,1.0001 0 0 0 0,-1.414063 L 14.636719,3.2929688 A 1.0001,1.0001 0 0 0 13.546875,3.0761719 Z m 1.380859,3.3378906 4.658203,4.6562505 -4.658203,4.658203 v -2.417969 a 1,1 0 0 0 -0.01563,-0.08398 1,1 0 0 0 -0.04297,-0.220704 1,1 0 0 0 -0.05078,-0.128906 1,1 0 0 0 -0.154296,-0.230469 1,1 0 0 0 -0.06055,-0.06445 1,1 0 0 0 -0.275391,-0.183593 1,1 0 0 0 -0.0332,-0.01563 1,1 0 0 0 -0.144531,-0.06445 c -0.715053,-0.162198 -1.460483,-0.248046 -2.222657,-0.248046 -3.1652404,0 -5.9313698,1.533899 -7.7656246,3.83789 0.5817654,-3.850781 3.7481604,-6.8378905 7.7656246,-6.8378905 0.612664,0 1.208046,0.069586 1.779297,0.1992188 a 1,1 0 0 0 0.128907,-0.021484 1,1 0 0 0 0.0918,0.037109 1,1 0 0 0 0.220704,-0.091797 1,1 0 0 0 0.388671,-0.1601563 1,1 0 0 0 0.197266,-0.2773437 1,1 0 0 0 0.169922,-0.2402344 1,1 0 0 0 -0.0059,-0.1582031 1,1 0 0 0 0.0293,-0.072266 z"
+     id="path1" />
+</svg>

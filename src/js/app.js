@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // promo video controls
     const video = document.getElementById('promo-video');
 
-    video.addEventListener('click', () => {
+    video?.addEventListener('click', () => {
         video.removeAttribute('muted');
         video.removeAttribute('autoplay');
         video.removeAttribute('playsinline');
@@ -223,52 +223,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // animation
-    gsap.registerPlugin(ScrollTrigger);
+    const promoBody = document.querySelector('.promo__body');
+    if (promoBody) {
+        gsap.registerPlugin(ScrollTrigger);
 
-    let mm = gsap.matchMedia();
+        let mm = gsap.matchMedia();
 
-    mm.add("(min-width: 992px)", () => {
-        const promoBody = document.querySelector('.promo__body');
-
-        // Инициализация анимации
-        const animation = gsap.to(".promo__video-wrapper .video-area", {
-            y: 620,
-            width: () => `${window.innerWidth - 90}px`,
-            height: "80vh",
-            x: () => {
-                const vw = window.innerWidth;
-                const bodyWidth = promoBody.offsetWidth;
-                return ((vw - bodyWidth) / 2) - 30;
-            },
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".promo__video-wrapper",
-                start: () => `top ${document.querySelector('.header').offsetHeight}`,
-                end: `${document.querySelector('.promo__offer').offsetHeight} top`,
-                scrub: 3,
-                // markers: true,
-                onEnter: () => promoBody.classList.add('scrolled'),
-                onLeaveBack: () => promoBody.classList.remove('scrolled'),
-            }
-        });
-
-        ScrollTrigger.addEventListener("refreshInit", () => {
-            animation.invalidate();
-        });
+        mm.add("(min-width: 992px)", () => {
 
 
-        window.addEventListener("resize", () => {
-            ScrollTrigger.refresh();
-        });
+            const animation = gsap.to(".promo__video-wrapper .video-area", {
+                y: 620,
+                width: () => `${window.innerWidth - 90}px`,
+                height: "80vh",
+                x: () => {
+                    const vw = window.innerWidth;
+                    const bodyWidth = promoBody.offsetWidth;
+                    return ((vw - bodyWidth) / 2) - 30;
+                },
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".promo__video-wrapper",
+                    start: () => `top ${document.querySelector('.header').offsetHeight}`,
+                    end: `${document.querySelector('.promo__offer').offsetHeight} top`,
+                    scrub: 3,
+                    // markers: true,
+                    onEnter: () => promoBody.classList.add('scrolled'),
+                    onLeaveBack: () => promoBody.classList.remove('scrolled'),
+                }
+            });
 
-        return () => {
-            window.removeEventListener("resize", () => {
+            ScrollTrigger.addEventListener("refreshInit", () => {
+                animation.invalidate();
+            });
+
+
+            window.addEventListener("resize", () => {
                 ScrollTrigger.refresh();
             });
-            animation.scrollTrigger?.kill();
-            animation.kill();
-        };
-    });
+
+            return () => {
+                window.removeEventListener("resize", () => {
+                    ScrollTrigger.refresh();
+                });
+                animation.scrollTrigger?.kill();
+                animation.kill();
+            };
+        });
+    }
 
 
 })

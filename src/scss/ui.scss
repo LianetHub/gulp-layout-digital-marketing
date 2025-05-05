@@ -1,5 +1,6 @@
 //============ МОДУЛИ ====================
 @import "modules/popup";
+@import "modules/breadcrumbs";
 
 //============ МОДУЛИ ====================
 .title-xl {
@@ -14,6 +15,17 @@
 	@media (min-width: $md3) {
 		letter-spacing: -0.09375rem;
 		font-size: 3.375rem;
+	}
+}
+.title-lg {
+	font-family: $font-involve;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: -0.0625rem;
+	font-size: 2rem;
+	@media (min-width: $md5) {
+		font-size: 2.5rem;
+		letter-spacing: -0.09375rem;
 	}
 }
 

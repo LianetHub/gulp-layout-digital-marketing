@@ -5,7 +5,9 @@
     })
     <body>
         <section class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {
+            "background": "dark"
+            })
             <main class="page">
                 <section class="promo">
                     <div class="promo__container container-lg">
@@ -585,25 +587,9 @@
                         </div>
                     </div>
                 </section>
-                <section class="lids">
-                    <div class="lids__container">
-                        <div class="lids__body">
-                            <div class="lids__main">
-                                <h2 class="lids__title title">С командой ID-Маркетинг вы&nbsp;получите 90% качественных лидов</h2>
-                                <p class="lids__desc">Используем проверенную технологию для привлечения качественных заявок. Подробнее о ней можно узнать в презентации</p>
-                            </div>
-                            <form action="#" class="lids__form form" id="contacts">
-                                <input type="text" name="name" class="form__control" placeholder="Имя">
-                                <input type="tel" name="tel" class="form__control" placeholder="+7 (999) 999-99-99">
-                                <label class="form__checkbox">
-                                    <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
-                                    <span class="form__checkbox-text">Я согласен с <a href="">политикой конфиденциальности</a></span>
-                                </label>
-                                <button type="submit" class="form__btn btn btn-primary">Отправить и получить презентацию&nbsp;→</button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
+                @@include('html/_lids.html', {
+                "hasDecor": true
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

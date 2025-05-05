@@ -30,6 +30,19 @@
 			outline: 1px solid #ba2028;
 			background: #fff1ed;
 		}
+
+		&:is(textarea) {
+			border-radius: 0.625rem;
+			border: rem(1) solid #e2e5eb;
+			resize: none;
+			background: #fff;
+			padding: rem(20);
+			height: rem(166);
+			@media (min-width: $md5) {
+				height: rem(156);
+				padding: rem(30);
+			}
+		}
 	}
 
 	// .form__checkbox
@@ -164,6 +177,11 @@
 				color: #0f141e;
 			}
 		}
+	}
+
+	&.btn-black {
+		background: #0f141e;
+		color: #fff;
 	}
 
 	&.btn-fullwidth {

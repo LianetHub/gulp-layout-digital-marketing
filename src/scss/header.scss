@@ -80,6 +80,10 @@
 		width: rem(40);
 		height: rem(40);
 		// box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+		.light-bg & {
+			background: #f4f5f5;
+		}
+		transition: background-color 0.3s ease, color 0.3s ease;
 		@media (min-width: $md5) {
 			font-size: 1.25rem;
 			width: rem(44);
@@ -88,6 +92,12 @@
 		@media (min-width: $md3) {
 			width: 3.125rem;
 			height: 3.125rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #9335ff;
+				color: #fff;
+			}
 		}
 	}
 	// .header__menu-toggler
@@ -102,6 +112,7 @@
 		right: 0;
 		bottom: 0;
 		background: #0f141e;
+		color: #fff;
 		z-index: 6;
 		width: rem(320);
 		padding: 2rem 2rem;
@@ -167,6 +178,9 @@
 			transition: background-color 0.3s ease, color 0.3s ease;
 			min-height: 3.125rem;
 			background: #fff;
+			.light-bg & {
+				background: #f4f5f5;
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
