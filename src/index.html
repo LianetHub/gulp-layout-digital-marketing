@@ -504,6 +504,81 @@
                         </div>
                     </div>
                 </section>
+                <section class="tariff">
+                    <div class="tariff__container">
+                        <div class="tariff__header">
+                            <div class="tariff__icon">
+                                <img src="@img/icons/rocket.svg" alt="Иконка">
+                            </div>
+                            <h2 class="tariff__title title">Выбирай тариф — и включай продажи на максимум</h2>
+                            <p class="tariff__subtitle">Хотите просто протестировать гипотезу или загрузить отдел продаж под завязку? У нас есть решение!</p>
+                        </div>
+                        <div class="tariff__slider swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="tariff__item swiper-slide">
+                                    <div class="tariff__item-header">
+                                        <div class="tariff__item-icon">
+                                            <img src="@img/icons/energy.svg" alt="Иконка">
+                                        </div>
+                                        <div class="tariff__item-title title-sm">
+                                            Быстрый старт
+                                        </div>
+                                    </div>
+                                    <div class="tariff__item-price">от 50 000 ₽</div>
+                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
+                                    <ul class="tariff__item-list">
+                                        <li>Лендинг</li>
+                                        <li>Реклама в Яндекс.Директ</li>
+                                        <li>Настройка аналитики и CRM</li>
+                                    </ul>
+                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
+                                </li>
+                                <li class="tariff__item swiper-slide">
+                                    <div class="tariff__item-header">
+                                        <div class="tariff__item-icon">
+                                            <img src="@img/icons/atom.svg" alt="Иконка">
+                                        </div>
+                                        <div class="tariff__item-title title-sm">
+                                            Стабильность
+                                        </div>
+                                    </div>
+                                    <div class="tariff__item-price">от 100 000 ₽</div>
+                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
+                                    <ul class="tariff__item-list">
+                                        <li>Многостраничный сайт</li>
+                                        <li>Реклама в Яндекс.Директ</li>
+                                        <li>Настройка аналитики и CRM</li>
+                                        <li>SEO-продвижение</li>
+                                        <li>Сквозная аналитика</li>
+                                    </ul>
+                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
+                                </li>
+                                <li class="tariff__item swiper-slide">
+                                    <div class="tariff__item-header">
+                                        <div class="tariff__item-icon">
+                                            <img src="@img/icons/crown-highlight.svg" alt="Иконка">
+                                        </div>
+                                        <div class="tariff__item-title title-sm">
+                                            Масштаб
+                                        </div>
+                                    </div>
+                                    <div class="tariff__item-price">от 150 000 ₽</div>
+                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
+                                    <ul class="tariff__item-list">
+                                        <li>Многостраничный сайт</li>
+                                        <li>Реклама в соц.сетях, Яндекс.Директ</li>
+                                        <li>Настройка CRM</li>
+                                        <li>SEO-продвижение</li>
+                                        <li>Сквозная аналитика</li>
+                                        <li>Команда под проект</li>
+                                        <li>Сопровождаем от клика до&nbsp;сделки</li>
+                                    </ul>
+                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
                 <section id="team" class="team">
                     <div class="team__container">
                         <h2 class="team__title title">В команде сертифицированные специалисты <span>Яндекс, Google, Click.ru</span> </h2>
@@ -588,6 +663,7 @@
                     </div>
                 </section>
                 @@include('html/_lids.html', {
+                "hasBlog":true,
                 "hasDecor": true
                 })
             </main>

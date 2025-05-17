@@ -1,5 +1,78 @@
 <section class="lids@@if(hasDecor === true) { lids--decor}">
     <div class="lids__container">
+        @@if(typeof hasBlog !== 'undefined' && hasBlog === true) {
+        <div class="lids__blog">
+            <div class="blog__header">
+                <h2 class="blog__caption title">Блог о маркетинге</h2>
+                <div class="blog__controls">
+                    <button type="button" class="blog__prev swiper-button-prev"></button>
+                    <button type="button" class="blog__next swiper-button-next"></button>
+                </div>
+            </div>
+            <div class="blog__slider swiper">
+                <ul class="swiper-wrapper">
+                    <li class="blog__item swiper-slide">
+                        <a href="" class="blog__card blog__card--dark">
+                            <span class="blog__card-header">
+                                <span class="blog__card-image">
+                                    <img src="@img/blog/01.svg" alt="icon">
+                                </span>
+                                <span class="blog__card-column">
+                                    <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                    <span class="blog__card-category">#сервисы</span>
+                                </span>
+                            </span>
+                            <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                        </a>
+                    </li>
+                    <li class="blog__item swiper-slide">
+                        <a href="" class="blog__card">
+                            <span class="blog__card-header">
+                                <span class="blog__card-image blog__card-image--offset">
+                                    <img src="@img/blog/02.svg" alt="icon">
+                                </span>
+                                <span class="blog__card-column">
+                                    <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                    <span class="blog__card-category">#сервисы</span>
+                                </span>
+                            </span>
+                            <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                        </a>
+                    </li>
+                    <li class="blog__item swiper-slide">
+                        <a href="" class="blog__card blog__card--violet">
+                            <span class="blog__card-header">
+                                <span class="blog__card-image">
+                                    <img src="@img/blog/01.svg" alt="icon">
+                                </span>
+                                <span class="blog__card-column">
+                                    <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                    <span class="blog__card-category">#сервисы</span>
+                                </span>
+                            </span>
+                            <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                        </a>
+                    </li>
+                    <li class="blog__item swiper-slide">
+                        <a href="" class="blog__card">
+                            <span class="blog__card-header">
+                                <span class="blog__card-image blog__card-image--offset">
+                                    <img src="@img/blog/02.svg" alt="icon">
+                                </span>
+                                <span class="blog__card-column">
+                                    <time datetime="2025-04-21" class="blog__card-time">21 апреля 2025</time>
+                                    <span class="blog__card-category">#сервисы</span>
+                                </span>
+                            </span>
+                            <span class="blog__card-name">ТОП-5 лучших сервисов для&nbsp;продвижения фитнес-клубов</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        }
         <div class="lids__body">
             <div class="lids__main">
                 <h2 class="lids__title title">С командой ID-Маркетинг вы&nbsp;получите 90% качественных лидов</h2>

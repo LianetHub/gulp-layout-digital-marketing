@@ -9,6 +9,36 @@
 	// .blog__container
 	&__container {
 	}
+	// .blog__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: rem(24);
+		@media (min-width: $md3) {
+			margin-bottom: rem(32);
+		}
+	}
+	&__slider {
+		overflow: visible;
+		@media (min-width: $md4) {
+			overflow: hidden;
+		}
+	}
+	// .blog__controls
+	&__controls {
+		display: flex;
+		gap: rem(10);
+	}
+	// .blog__prev
+	&__prev {
+		border: rem(1) solid #0f141e;
+	}
+	// .blog__next
+	&__next {
+		border: rem(1) solid #0f141e;
+	}
+
 	// .blog__title
 	&__title {
 		margin-top: 3rem;
@@ -54,6 +84,12 @@
 	}
 	// .blog__item
 	&__item {
+		&.swiper-slide {
+			width: 100%;
+			@media (min-width: $md4) {
+				width: rem(570);
+			}
+		}
 		&:nth-child(even) {
 			.blog__card-header {
 				flex-direction: row;
@@ -177,5 +213,8 @@
 			margin-left: auto;
 			font-size: 1.375rem;
 		}
+	}
+	// .blog__pagination
+	&__pagination {
 	}
 }

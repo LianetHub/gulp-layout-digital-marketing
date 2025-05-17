@@ -953,6 +953,135 @@
 	}
 }
 
+.tariff {
+	padding: 3.5rem 0;
+	// .tariff__container
+	&__container {
+	}
+	// .tariff__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: rem(446);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	// .tariff__icon
+	&__icon {
+	}
+	// .tariff__title
+	&__title {
+	}
+	// .tariff__subtitle
+	&__subtitle {
+		margin-top: rem(44);
+		font-size: 1rem;
+		line-height: 155%;
+		max-width: 27.25rem;
+	}
+	// .tariff__slider
+	&__slider {
+		margin-top: 3.12rem;
+	}
+	// .tariff__item
+	&__item {
+		border-radius: 0.625rem;
+		background: #232730;
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		height: auto;
+		width: rem(262);
+		padding: 1.88rem;
+		@media (min-width: $md4) {
+			padding: 2.5rem;
+			width: rem(360);
+		}
+	}
+	// .tariff__item-header
+	&__item-header {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		@media (min-width: $md4) {
+			gap: rem(16);
+		}
+	}
+	// .tariff__item-icon
+	&__item-icon {
+		flex-shrink: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		@media (min-width: $md4) {
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+	// .tariff__item-title
+	&__item-title {
+	}
+	// .tariff__item-price
+	&__item-price {
+		border-radius: 0.625rem;
+		background: rgba(147, 53, 255, 0.3);
+		padding: 0.5rem 0.875rem;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 125%;
+		border-radius: 0.625rem;
+		font-family: Involve;
+		margin-top: 1rem;
+		@media (min-width: $md4) {
+			margin-top: 1.56rem;
+		}
+	}
+	// .tariff__item-desc
+	&__item-desc {
+		line-height: 155%;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			margin-top: 1.56rem;
+			font-size: 1rem;
+		}
+	}
+	// .tariff__item-list
+	&__item-list {
+		margin-bottom: auto;
+		font-size: 0.875rem;
+		margin-top: 1rem;
+		@media (min-width: $md4) {
+			font-size: 1rem;
+			margin-top: 1.56rem;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			gap: 0.625em;
+			line-height: 155%;
+			&::before {
+				content: "";
+				width: 1.875em;
+				height: 1.875em;
+				flex-shrink: 0;
+				background: url("@img/icons/switcher.svg") center / contain no-repeat;
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	// .tariff__item-btn
+	&__item-btn {
+		margin-top: 2rem;
+		@media (min-width: $md4) {
+			margin-top: 2.5rem;
+		}
+	}
+}
+
 .team {
 	padding: rem(50) 0 rem(100);
 	@media (min-width: $md3) {
@@ -1096,6 +1225,13 @@
 	}
 	// .lids__container
 	&__container {
+	}
+	// .lids__blog
+	&__blog {
+		margin-bottom: rem(120);
+		@media (min-width: $md3) {
+			margin-bottom: rem(140);
+		}
 	}
 	// .lids__body
 	&__body {

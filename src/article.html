@@ -120,7 +120,11 @@
                         </article>
                         <div class="article__footer">
                             <div class="article__footer-actions">
-                                <button type="button" class="article__footer-action icon-like">15</button>
+                                <span class="xlike__item xlike__item_like article__footer-action icon-like">
+                                    <a class="xlike__link [ js-xlike-button ]" data-xlike-value="1" href="javascript:undefined;">
+                                        <span class="xlike__count xlike__count_like [ js-xlike-number ]">15</span>
+                                    </a>
+                                </span>
                                 <div class="article__footer-action icon-comment">15</div>
                                 <a href="" class="article__footer-action icon-share"></a>
                             </div>
@@ -131,6 +135,66 @@
                                     <button type="submit" class="article__comment-btn btn btn-black">Отправить</button>
                                 </div>
                             </form>
+                            <div class="article__login">
+                                <a href="">Войти</a>, чтобы комментировать
+                            </div>
+                            <div class="article__comments">
+                                <div class="article__comment-block">
+                                    <div class="article__thumb">
+                                        <img src="@img/thumb.png" alt="thumb">
+                                    </div>
+                                    <div class="article__comment-body">
+                                        <div class="article__comment-header">
+                                            <div class="article__comment-name">Иван Крылов</div>
+                                            <time datetime="2025-05-12T11:42" class="article__comment-time">12 мая 2025 в 11:42</time>
+                                        </div>
+                                        <blockquote class="article__comment-quote">Отличная статья! Мы в своей компании сейчас пользуемся ZAZU MEDIA, и ищем новые сервисы для продвижения, так как этот нам больше не подходит(( Спасибо за то, что поделились этой подборкой!</blockquote>
+                                        <a href="" class="article__comment-answer">Ответить</a>
+                                        <button type="button" class="article__comment-more">Показать 2 ответа</button>
+                                    </div>
+                                </div>
+                                <div class="article__comment-block">
+                                    <div class="article__thumb">
+                                        <img src="@img/thumb.png" alt="thumb">
+                                    </div>
+                                    <div class="article__comment-body">
+                                        <div class="article__comment-header">
+                                            <div class="article__comment-name">Иван Крылов</div>
+                                            <time datetime="2025-05-12T11:42" class="article__comment-time">12 мая 2025 в 11:42</time>
+                                        </div>
+                                        <blockquote class="article__comment-quote">Отличная статья! Мы в своей компании сейчас пользуемся ZAZU MEDIA, и ищем новые сервисы для продвижения, так как этот нам больше не подходит(( Спасибо за то, что поделились этой подборкой!</blockquote>
+                                        <a href="" class="article__comment-answer">Ответить</a>
+                                        <div class="article__comment-list">
+                                            <div class="article__comment-block">
+                                                <div class="article__thumb">
+                                                    <img src="@img/thumb.png" alt="thumb">
+                                                </div>
+                                                <div class="article__comment-body">
+                                                    <div class="article__comment-header">
+                                                        <div class="article__comment-name">Марат</div>
+                                                        <time datetime="2025-05-12T13:10" class="article__comment-time">12 мая 2025 в 13:10</time>
+                                                    </div>
+                                                    <blockquote class="article__comment-quote">Рады, что вам было полезно!)</blockquote>
+                                                    <a href="" class="article__comment-answer">Ответить</a>
+                                                </div>
+                                            </div>
+                                            <div class="article__comment-block">
+                                                <div class="article__thumb">
+                                                    <img src="@img/thumb.png" alt="thumb">
+                                                </div>
+                                                <div class="article__comment-body">
+                                                    <div class="article__comment-header">
+                                                        <div class="article__comment-name">Елена Крылова</div>
+                                                        <time datetime="2025-05-13T15:40" class="article__comment-time">13 мая 2025 в 15:40</time>
+                                                    </div>
+                                                    <blockquote class="article__comment-quote">Мы тоже пользовались ZAZU MEDIA раньше, сейчас перешли на SMS Дар.</blockquote>
+                                                    <a href="" class="article__comment-answer">Ответить</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

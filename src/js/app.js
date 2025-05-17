@@ -133,6 +133,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    if (document.querySelector('.tariff__slider')) {
+        new Swiper('.tariff__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            breakpoints: {
+                575.98: {
+                    spaceBetween: 20,
+                },
+                991.98: {
+                    spaceBetween: 40,
+                }
+            }
+        });
+    }
+    if (document.querySelector('.blog__slider')) {
+        new Swiper('.blog__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.blog__next',
+                prevEl: '.blog__prev',
+            },
+            breakpoints: {
+                575.98: {
+                    spaceBetween: 20,
+                },
+
+            }
+        });
+    }
+
     if (document.querySelector('.cases__tabs-btns')) {
         new Swiper('.cases__tabs-btns', {
             slidesPerView: "auto",

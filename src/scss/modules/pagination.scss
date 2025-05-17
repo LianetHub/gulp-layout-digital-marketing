@@ -1,28 +1,45 @@
 .pagination {
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 2.5rem;
 	@media (min-width: $md5) {
-		gap: 0.25rem;
+		margin-top: 3.75rem;
+	}
+	@media (min-width: $md3) {
+		margin-top: 4.38rem;
 	}
 	// .pagination__item
 	&__item {
-		width: rem(31);
-		height: rem(31);
-		font-size: rem(14);
-		font-weight: 500;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 0.625rem;
+		font-size: 0.875rem;
 		line-height: 150%;
-		border-radius: 50%;
+		text-transform: uppercase;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: background-color 0.3s ease 0s;
-		&.active {
-			background: #c5d1e0;
+		border-radius: 0.625rem;
+		@media (min-width: $md5) {
+			width: 2.8125rem;
+			height: 2.8125rem;
 		}
-		&[href] {
+		&.active {
+			border-color: #9335ff;
+			background-color: #9335ff;
+			color: #fff;
+		}
+
+		&:is(a) {
+			transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+			border: rem(1) solid #e7e8e9;
 			@media (any-hover: hover) {
 				&:hover {
-					background: #f0f5fb;
+					border-color: #9335ff;
+					background-color: #9335ff;
+					color: #fff;
 				}
 			}
 		}
@@ -30,13 +47,9 @@
 	// .pagination__next
 	&__next,
 	&__prev {
+		@extend .pagination__item;
 		transition: color 0.3s ease 0s;
-		& span {
-			display: none;
-			@media (min-width: $md4) {
-				display: inline;
-			}
-		}
+
 		&[aria-disabled="true"] {
 			pointer-events: none;
 			user-select: none;
@@ -49,15 +62,7 @@
 		}
 	}
 	&__prev {
-		margin-right: rem(26);
-		@media (min-width: $md4) {
-			margin-right: rem(46);
-		}
 	}
 	&__next {
-		margin-left: rem(26);
-		@media (min-width: $md4) {
-			margin-left: rem(46);
-		}
 	}
 }

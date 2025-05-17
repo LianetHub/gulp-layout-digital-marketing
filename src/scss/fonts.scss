@@ -1,11 +1,4 @@
 @font-face {
-                            font-family: 'Involve';
-                            font-display: swap;
-                            src: url("../fonts/Involve-Medium.woff2") format("woff2"), url("../fonts/Involve-Medium.woff") format("woff");
-                            font-weight: 500;
-                            font-style: normal;
-                        }
-@font-face {
                             font-family: 'icons';
                             font-display: swap;
                             src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -13,10 +6,10 @@
                             font-style: normal;
                         }
 @font-face {
-                            font-family: 'PTRootUI';
+                            font-family: 'Involve';
                             font-display: swap;
-                            src: url("../fonts/PTRootUI-Bold.woff2") format("woff2"), url("../fonts/PTRootUI-Bold.woff") format("woff");
-                            font-weight: 700;
+                            src: url("../fonts/Involve-Medium.woff2") format("woff2"), url("../fonts/Involve-Medium.woff") format("woff");
+                            font-weight: 500;
                             font-style: normal;
                         }
 @font-face {
@@ -24,6 +17,13 @@
                             font-display: swap;
                             src: url("../fonts/PTRootUI-Medium.woff2") format("woff2"), url("../fonts/PTRootUI-Medium.woff") format("woff");
                             font-weight: 500;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'PTRootUI';
+                            font-display: swap;
+                            src: url("../fonts/PTRootUI-Bold.woff2") format("woff2"), url("../fonts/PTRootUI-Bold.woff") format("woff");
+                            font-weight: 700;
                             font-style: normal;
                         }
 @font-face {
