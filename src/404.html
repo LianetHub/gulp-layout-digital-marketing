@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ошибка'
+    })
+    <body class="light-bg">
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "background": "light"
+            })
+            <main class="page">
+                <section class="error">
+                    <div class="error__container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__list-item">
+                                    <a href="/" class="breadcrumbs__list-link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__list-item">
+                                    <a class="breadcrumbs__list-link active">Ошибка 404</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="error__body">
+                            <div class="error__icon">
+                                <img src="@img/emoji.png" alt="Иконка">
+                            </div>
+                            <h1 class="error__title title-lg">Похоже, это тупик</h1>
+                            <p class="error__subtitle">Этой страницы не существует. <br> Но мы умеем находить выход даже из таких ситуаций</p>
+                            <a href="" class="error__btn btn btn-primary icon-right-pixel">Попробовать снова</a>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_lids.html', {
+                "hasDecor": false
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+
+            @@include('html/_js.html', {})
+    </body>
+</html>

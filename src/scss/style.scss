@@ -36,7 +36,7 @@ $maxWidthContainer: rem(1160); // Максимальная ширина огра
 $containerPadding: 30;
 
 $text: #fff;
-
+$dark: #0f141e;
 $accent: #9335ff;
 
 // Z-Index
@@ -140,3 +140,5 @@ body {
 @import "./pages/home";
 @import "./pages/article";
 @import "./pages/blog";
+@import "./pages/error";
+@import "./pages/login";

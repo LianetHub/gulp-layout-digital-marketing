@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Ошибка'
+    })
+    <body class="light-bg">
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "background": "light"
+            })
+            <main class="page">
+                <div class="login">
+                    <div class="login__container">
+                        <div class="login__body">
+                            <div class="login__tabs">
+                                <button type="button" class="login__tabs-btn active">Войти в профиль</button>
+                                <button type="button" class="login__tabs-btn">Зарегистрироваться</button>
+                            </div>
+                            <div class="login__content">
+                                <div class="login__content-block active">
+                                    <form action="#" class="login__form">
+                                        <div class="login__form-fields">
+                                            <div class="login__form-field">
+                                                <label for="sign-in-email" class="login__form-label">E-mail:</label>
+                                                <input id="sign-in-email" type="email" name="email" class="form__control" placeholder="example@gmail.com">
+                                            </div>
+                                            <div class="login__form-field">
+                                                <label for="sign-in-password" class="login__form-label">Пароль:</label>
+                                                <input id="sign-in-password" type="password" name="password" class="form__control" placeholder="Пароль">
+                                            </div>
+                                        </div>
+                                        <a href="" class="login__forgot">Забыли пароль?</a>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="remember" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                Запомнить меня
+                                            </span>
+                                        </label>
+                                        <button type="submit" class="login__form-btn btn btn-primary icon-right-pixel btn-fullwidth">
+                                            Войти
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="login__content-block ">
+                                    <form action="#" class="login__form">
+                                        <div class="login__form-fields">
+                                            <div class="login__form-field">
+                                                <label for="sign-up-name" class="login__form-label">Имя и фамилия:</label>
+                                                <input id="sign-up-name" type="name" name="name" class="form__control" placeholder="Введите имя">
+                                            </div>
+                                            <div class="login__form-field">
+                                                <label for="sign-up-phone" class="login__form-label">Телефон:</label>
+                                                <input id="sign-up-phone" type="text" name="phone" class="phone-input" placeholder="(___) ___–__–__">
+                                            </div>
+                                            <div class="login__form-field">
+                                                <label for="sign-up-email" class="login__form-label">E-mail:</label>
+                                                <input id="sign-up-email" type="email" name="email" class="form__control" placeholder="example@gmail.com">
+                                            </div>
+                                            <div class="login__form-field">
+                                                <label for="sign-up-password" class="login__form-label">Пароль:</label>
+                                                <input id="sign-up-password" type="password" name="password" class="form__control" placeholder="Пароль">
+                                            </div>
+                                        </div>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+                                            <span class="form__checkbox-text">
+                                                я согласен(-на) с <a href="">политикой конфиденциальности</a>
+                                                и&nbsp;даю согласие на обработку <a href="">персональных данных</a>
+                                            </span>
+                                        </label>
+                                        <button type="submit" class="login__form-btn btn btn-primary icon-right-pixel btn-fullwidth">
+                                            Войти
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                @@include('html/_lids.html', {
+                "hasDecor": false
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+
+            @@include('html/_js.html', {})
+    </body>
+</html>

@@ -60,15 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
             const allTabBtns = tabsWrapper ? tabsWrapper.querySelectorAll('.cases__tab-btn') : document.querySelectorAll('.cases__tab-btn');
             const allTabContents = tabsWrapper ? tabsWrapper.querySelectorAll('.cases__tabs-content') : document.querySelectorAll('.cases__tabs-content');
 
-            console.log(allTabContents);
-
-
             const index = Array.from(allTabBtns).indexOf(tabBtn);
 
             allTabBtns.forEach(btn => btn.classList.remove('active'));
             allTabContents.forEach(content => content.classList.remove('active'));
 
             tabBtn.classList.add('active');
+            if (allTabContents[index]) {
+                allTabContents[index].classList.add('active');
+            }
+        }
+
+        const loginTabBtn = e.target.closest('.login__tabs-btn');
+        if (loginTabBtn) {
+
+            const allTabBtns = document.querySelectorAll('.login__tabs-btn');
+            const allTabContents = document.querySelectorAll('.login__content-block');
+
+            const index = Array.from(allTabBtns).indexOf(loginTabBtn);
+
+            allTabBtns.forEach(btn => btn.classList.remove('active'));
+            allTabContents.forEach(content => content.classList.remove('active'));
+
+            loginTabBtn.classList.add('active');
             if (allTabContents[index]) {
                 allTabContents[index].classList.add('active');
             }
@@ -175,55 +189,122 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // ========== intlTelInput ==========
+    document.querySelectorAll('.phone-input')?.forEach(function (input) {
+        const iti = window.intlTelInput(input, {
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+            initialCountry: "ru",
+            separateDialCode: true,
+        });
 
-    // маска для телефонов
-    var phoneInputs = document.querySelectorAll('input[type="tel"]');
 
-    var getInputNumbersValue = function (input) {
-        // Return stripped input value — just numbers
+
+        const applyMaskIfRussian = () => {
+            const country = iti.getSelectedCountryData().iso2;
+
+            input.removeEventListener('input', onIntlPhoneInput);
+            input.removeEventListener('keydown', onIntlPhoneKeyDown);
+            input.removeEventListener('paste', onPhonePaste);
+            input.setAttribute('placeholder', '')
+
+            if (country === 'ru') {
+                input.addEventListener('input', onIntlPhoneInput);
+                input.addEventListener('keydown', onIntlPhoneKeyDown);
+                input.addEventListener('paste', onPhonePaste);
+                input.setAttribute('placeholder', '(___) ___–__–__')
+            }
+        };
+
+        input.addEventListener('countrychange', applyMaskIfRussian);
+        applyMaskIfRussian();
+    });
+
+    // ========== Маска без +7 (для intlTelInput с separateDialCode) ==========
+    function getInputNumbersValue(input) {
         return input.value.replace(/\D/g, '');
     }
 
-    var onPhonePaste = function (e) {
-        var input = e.target,
-            inputNumbersValue = getInputNumbersValue(input);
-        var pasted = e.clipboardData || window.clipboardData;
+    function onPhonePaste(e) {
+        const input = e.target;
+        const inputNumbersValue = getInputNumbersValue(input);
+        const pasted = e.clipboardData || window.clipboardData;
         if (pasted) {
-            var pastedText = pasted.getData('Text');
+            const pastedText = pasted.getData('Text');
             if (/\D/g.test(pastedText)) {
-                // Attempt to paste non-numeric symbol — remove all non-numeric symbols,
-                // formatting will be in onPhoneInput handler
                 input.value = inputNumbersValue;
-                return;
             }
         }
     }
 
-    var onPhoneInput = function (e) {
-        var input = e.target,
-            inputNumbersValue = getInputNumbersValue(input),
-            selectionStart = input.selectionStart,
-            formattedInputValue = "";
+    function onIntlPhoneInput(e) {
+        const input = e.target;
+        let inputNumbersValue = getInputNumbersValue(input);
+        const selectionStart = input.selectionStart;
 
         if (!inputNumbersValue) {
-            return input.value = "";
+            input.value = "";
+            return;
         }
 
-        if (input.value.length != selectionStart) {
-            // Editing in the middle of input, not last symbol
+        if (input.value.length !== selectionStart) {
             if (e.data && /\D/g.test(e.data)) {
-                // Attempt to input non-numeric symbol
                 input.value = inputNumbersValue;
             }
             return;
         }
 
-        if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
-            if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
-            var firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
-            formattedInputValue = input.value = firstSymbols + " ";
+        let formattedInputValue = "";
+
+        if (inputNumbersValue.length >= 1) {
+            formattedInputValue += '(' + inputNumbersValue.substring(0, 3);
+        }
+        if (inputNumbersValue.length >= 4) {
+            formattedInputValue += ') ' + inputNumbersValue.substring(3, 6);
+        }
+        if (inputNumbersValue.length >= 7) {
+            formattedInputValue += '-' + inputNumbersValue.substring(6, 8);
+        }
+        if (inputNumbersValue.length >= 9) {
+            formattedInputValue += '-' + inputNumbersValue.substring(8, 10);
+        }
+
+        input.value = formattedInputValue;
+    }
+
+
+    function onIntlPhoneKeyDown(e) {
+        const input = e.target;
+        const inputValue = getInputNumbersValue(input);
+        if (e.keyCode === 8 && inputValue.length <= 1) {
+            input.value = "";
+        }
+    }
+
+    // ========== Маска для обычных input[type="tel"] ==========
+    function onPhoneInput(e) {
+        const input = e.target;
+        let inputNumbersValue = getInputNumbersValue(input);
+        const selectionStart = input.selectionStart;
+
+        if (!inputNumbersValue) {
+            input.value = "";
+            return;
+        }
+
+        if (input.value.length !== selectionStart) {
+            if (e.data && /\D/g.test(e.data)) {
+                input.value = inputNumbersValue;
+            }
+            return;
+        }
+
+        if (["7", "8", "9"].includes(inputNumbersValue[0])) {
+            if (inputNumbersValue[0] === "9") inputNumbersValue = "7" + inputNumbersValue;
+            const firstSymbols = (inputNumbersValue[0] === "8") ? "8" : "+7";
+            let formattedInputValue = firstSymbols;
+
             if (inputNumbersValue.length > 1) {
-                formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+                formattedInputValue += ' (' + inputNumbersValue.substring(1, 4);
             }
             if (inputNumbersValue.length >= 5) {
                 formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
@@ -234,23 +315,28 @@ document.addEventListener("DOMContentLoaded", () => {
             if (inputNumbersValue.length >= 10) {
                 formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
             }
+
+            input.value = formattedInputValue;
         } else {
-            formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
-        }
-        input.value = formattedInputValue;
-    }
-    var onPhoneKeyDown = function (e) {
-        // Clear input after remove last symbol
-        var inputValue = e.target.value.replace(/\D/g, '');
-        if (e.keyCode == 8 && inputValue.length == 1) {
-            e.target.value = "";
+            input.value = '+' + inputNumbersValue.substring(0, 16);
         }
     }
-    for (var phoneInput of phoneInputs) {
-        phoneInput.addEventListener('keydown', onPhoneKeyDown);
-        phoneInput.addEventListener('input', onPhoneInput, false);
-        phoneInput.addEventListener('paste', onPhonePaste, false);
+
+    function onPhoneKeyDown(e) {
+        const input = e.target;
+        const inputValue = getInputNumbersValue(input);
+        if (e.keyCode === 8 && inputValue.length === 1) {
+            input.value = "";
+        }
     }
+
+    document.querySelectorAll('input[type="tel"]:not(.phone-input)')?.forEach(function (input) {
+        input.addEventListener('keydown', onPhoneKeyDown);
+        input.addEventListener('input', onPhoneInput);
+        input.addEventListener('paste', onPhonePaste);
+    });
+
+
 
 
     // animation
