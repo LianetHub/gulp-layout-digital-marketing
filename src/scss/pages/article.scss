@@ -16,30 +16,90 @@
 	}
 	// .article__header
 	&__header {
-		margin-top: 3rem;
+		margin-top: rem(40);
+		@media (min-width: $md4) {
+			margin-top: 3rem;
+		}
 	}
 	// .article__title
 	&__title {
+		@media (max-width: $md4) {
+			font-size: rem(26);
+		}
+	}
+	// .article__caption
+	&__caption {
+		border-radius: 0.625rem;
+		background: #f4f5f5;
+		padding: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.94rem;
+		margin-top: rem(40);
+		@media (min-width: $md4) {
+			margin-top: 3.12rem;
+			justify-content: space-between;
+			align-items: flex-end;
+			flex-direction: row;
+		}
+	}
+	// .article__author
+	&__author {
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+	}
+	// .article__author-thumb
+	&__author-thumb {
+		flex-shrink: 0;
+		width: rem(60);
+		height: rem(60);
+		& img {
+			border-radius: 50%;
+		}
+		@media (min-width: $md4) {
+			height: 3.3125rem;
+			width: 3.3125rem;
+		}
+	}
+	// .article__author-info
+	&__author-info {
+	}
+	// .article__author-name
+	&__author-name {
+		font-weight: 500;
+		line-height: 150%;
+		@media (min-width: $md4) {
+			font-size: 1.125rem;
+		}
+	}
+	// .article__author-position
+	&__author-position {
+		margin-top: 0.31rem;
+		color: rgba(15, 20, 30, 0.35);
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 150%;
 	}
 	// .article__stats
 	&__stats {
-		margin-top: rem(30);
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		flex-wrap: wrap;
-		gap: 1.88rem;
+		gap: 1.25rem;
 		row-gap: 0.25rem;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		line-height: 125%;
+		color: rgba(15, 20, 30, 0.4);
 	}
 	// .article__read
 	&__read {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		color: rgba(15, 20, 30, 0.4);
-		font-size: 0.875rem;
-		font-weight: 500;
-		line-height: 125%;
-		margin-right: auto;
+
 		&::before {
 			width: 1.25rem;
 			height: 1.25rem;
@@ -48,10 +108,6 @@
 	}
 	// .article__time
 	&__time {
-		color: rgba(15, 20, 30, 0.4);
-		font-size: 0.875rem;
-		font-weight: 500;
-		line-height: 125%;
 	}
 	// .article__tag
 	&__tag {
@@ -65,7 +121,10 @@
 	}
 	// .article__nav
 	&__nav {
-		margin-top: 3.19rem;
+		margin-top: rem(40);
+		@media (min-width: $md4) {
+			margin-top: 3.19rem;
+		}
 	}
 	// .article__nav-caption
 	&__nav-caption {

@@ -2605,36 +2605,91 @@ body.lock {
   }
 }
 .article__header {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
-.article__stats {
-  margin-top: 1.875rem;
+@media (min-width: 743.98px) {
+  .article__header {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 743.98px) {
+  .article__title {
+    font-size: 1.625rem;
+  }
+}
+.article__caption {
+  border-radius: 0.625rem;
+  background: #f4f5f5;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.94rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 743.98px) {
+  .article__caption {
+    margin-top: 3.12rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+}
+.article__author {
   display: flex;
   align-items: center;
+  gap: 0.9375rem;
+}
+.article__author-thumb {
+  flex-shrink: 0;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.article__author-thumb img {
+  border-radius: 50%;
+}
+@media (min-width: 743.98px) {
+  .article__author-thumb {
+    height: 3.3125rem;
+    width: 3.3125rem;
+  }
+}
+.article__author-name {
+  font-weight: 500;
+  line-height: 150%;
+}
+@media (min-width: 743.98px) {
+  .article__author-name {
+    font-size: 1.125rem;
+  }
+}
+.article__author-position {
+  margin-top: 0.31rem;
+  color: rgba(15, 20, 30, 0.35);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.article__stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.88rem;
+  gap: 1.25rem;
   row-gap: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 125%;
+  color: rgba(15, 20, 30, 0.4);
 }
 .article__read {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(15, 20, 30, 0.4);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 125%;
-  margin-right: auto;
 }
 .article__read::before {
   width: 1.25rem;
   height: 1.25rem;
   font-size: 1.25rem;
-}
-.article__time, .article__tag {
-  color: rgba(15, 20, 30, 0.4);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 125%;
 }
 .article__tag {
   transition: color 0.3s ease;
@@ -2645,7 +2700,12 @@ body.lock {
   }
 }
 .article__nav {
-  margin-top: 3.19rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 743.98px) {
+  .article__nav {
+    margin-top: 3.19rem;
+  }
 }
 .article__nav-caption {
   color: #0f141e;
