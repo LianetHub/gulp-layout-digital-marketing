@@ -70,8 +70,10 @@
 
                 </ul>
             </div>
-
         </div>
+        }
+        @@if(typeof hasFaq !== 'undefined' && hasFaq === true) {
+        @@include('./_faq.html')
         }
         <div class="lids__body">
             <div class="lids__main">

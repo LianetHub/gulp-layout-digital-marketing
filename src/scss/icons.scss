@@ -18,6 +18,12 @@
 	}
 }
 
+.icon-minus:before {
+	content: "\e90c";
+}
+.icon-plus:before {
+	content: "\e90d";
+}
 .icon-telegram-alternate:before {
 	content: "\e907";
 }
