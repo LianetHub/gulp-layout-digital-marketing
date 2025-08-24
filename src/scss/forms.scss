@@ -218,6 +218,22 @@
 		color: #fff;
 	}
 
+	&.btn-black-outline {
+		border: rem(1) solid #0f141e;
+		color: #0f141e;
+		background: transparent;
+		&:disabled,
+		&[aria-disabled="true"] {
+			border-color: rgba($color: #0f141e, $alpha: 0.5);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #0f141e;
+				color: #fff;
+			}
+		}
+	}
+
 	&.btn-sm {
 		font-size: 0.875rem;
 		font-weight: 500;
@@ -229,6 +245,7 @@
 	&.btn-fullwidth {
 		width: 100%;
 	}
+
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;

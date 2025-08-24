@@ -721,6 +721,108 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    // quiz
+
+    if (document.querySelector('.quiz')) {
+        const quizForm = document.querySelector('.promo__quiz');
+        const quizBlocks = quizForm.querySelectorAll('.quiz__block');
+        const prevBtn = quizForm.querySelector('.quiz__prev');
+        const nextBtn = quizForm.querySelector('.quiz__next');
+        const progressBar = quizForm.querySelector('.quiz__progress-bar');
+        const progressStatus = quizForm.querySelector('.quiz__progress-status');
+        const quizBottom = quizForm.querySelector('.quiz__bottom');
+
+        let currentStep = 0;
+
+        const updateUI = () => {
+            quizBlocks.forEach((block, index) => {
+                block.classList.toggle('active', index === currentStep);
+            });
+
+            prevBtn.disabled = currentStep === 0;
+            nextBtn.disabled = !validateStep(currentStep);
+
+            const progressValue = (currentStep / (quizBlocks.length - 1)) * 100;
+            progressBar.value = progressValue;
+            progressStatus.textContent = `Заполнено ${Math.round(progressValue)}%`;
+
+            if (currentStep === quizBlocks.length - 1) {
+                nextBtn.classList.add('hidden');
+                prevBtn.classList.add('hidden');
+                quizBottom.classList.add('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                prevBtn.classList.remove('hidden');
+                quizBottom.classList.remove('hidden');
+            }
+        };
+
+        const validateStep = (step) => {
+            const activeBlock = quizBlocks[step];
+            const inputs = activeBlock.querySelectorAll('input:not([type="hidden"])');
+
+            if (inputs.length === 0) {
+                return true;
+            }
+
+            if (inputs[0].type === 'checkbox') {
+                return activeBlock.querySelector('input[type="checkbox"]:checked');
+            } else if (inputs[0].type === 'radio') {
+                return activeBlock.querySelector('input[type="radio"]:checked');
+            } else if (inputs[0].type === 'text' || inputs[0].type === 'tel') {
+                return Array.from(inputs).every(input => input.value.trim() !== '');
+            }
+
+            return false;
+        };
+
+        const handleInputChange = (event) => {
+            const input = event.target;
+            const parentBlock = input.closest('.quiz__block');
+            const step = Array.from(quizBlocks).indexOf(parentBlock);
+
+            nextBtn.disabled = !validateStep(step);
+        };
+
+        quizBlocks.forEach(block => {
+            block.addEventListener('input', handleInputChange);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < quizBlocks.length - 1) {
+                currentStep++;
+                updateUI();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 0) {
+                currentStep--;
+                updateUI();
+            }
+        });
+
+        quizForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if (validateStep(currentStep)) {
+                const formData = new FormData(quizForm);
+                const data = {};
+                formData.forEach((value, key) => {
+                    if (data[key]) {
+                        if (!Array.isArray(data[key])) {
+                            data[key] = [data[key]];
+                        }
+                        data[key].push(value);
+                    } else {
+                        data[key] = value;
+                    }
+                });
+            }
+        });
+
+        updateUI();
+    }
 
 })
 

@@ -93,13 +93,14 @@
 		&::before {
 			@extend %ic, .icon-check;
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 0.25rem;
+			left: 0.25rem;
 			background: #9335ff;
 			color: #fff;
 			border-radius: 50%;
 			width: rem(20);
 			height: rem(20);
+			font-size: 0.75rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;

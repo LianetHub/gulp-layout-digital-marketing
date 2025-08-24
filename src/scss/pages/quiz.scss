@@ -1,0 +1,351 @@
+.quiz {
+	border-radius: 0.625rem;
+	background: #fff;
+	color: #0f141e;
+	font-family: $font-involve;
+	min-height: 31.9375rem;
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+	padding: rem(30);
+	@media (min-width: $md4) {
+		padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+	}
+	// .quiz__blocks
+	&__blocks {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .quiz__block
+	&__block {
+		flex: 1 1 auto;
+		display: none;
+
+		flex-direction: column;
+		align-items: flex-start;
+		&.active {
+			display: flex;
+		}
+	}
+
+	// .quiz__title
+	&__title {
+		font-weight: 500;
+		line-height: 130%;
+		letter-spacing: -0.0625rem;
+		max-width: rem(432);
+		font-size: rem(18);
+		@media (min-width: $md5) {
+			font-size: rem(28);
+		}
+		@media (min-width: $md3) {
+			max-width: 34rem;
+			font-size: 2rem;
+		}
+	}
+	// .quiz__hint
+	&__hint {
+		margin-top: 1.25rem;
+		color: #0f141e;
+		font-weight: 500;
+		line-height: 125%;
+		border-radius: 0.3125rem;
+		border: 1px solid #c491ff;
+		background: rgba(196, 145, 255, 0.3);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.31rem;
+		font-size: rem(11);
+		padding: rem(3);
+		@media (min-width: $md5) {
+			padding: 0.31rem;
+			font-size: 0.75rem;
+		}
+		&::before {
+			background: #9335ff;
+			color: #fff;
+			border-radius: 50%;
+			width: 0.75rem;
+			height: 0.75rem;
+			font-size: 0.675rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+		}
+	}
+	// .quiz__body
+	&__body {
+		width: 100%;
+		display: grid;
+		margin-top: rem(20);
+		gap: rem(10);
+		@media (min-width: $md5) {
+			gap: rem(15);
+			margin-top: rem(30);
+		}
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+			gap: rem(30);
+			grid-template-columns: repeat(3, 1fr);
+			&--large {
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+	// .quiz__item
+	&__item {
+	}
+	// .quiz__item-input
+	&__item-input {
+		&:checked {
+			& + .quiz__item-btn {
+				&::before {
+					@extend %ic, .icon-check;
+				}
+			}
+		}
+		&[type="radio"] {
+			& + .quiz__item-btn {
+				&::before {
+					border-radius: 50%;
+				}
+			}
+			&:checked {
+				& + .quiz__item-btn {
+					&::before {
+						content: "";
+						background: $accent;
+						border: 0.37rem solid #eaebeb;
+					}
+				}
+			}
+		}
+	}
+	// .quiz__item-btn
+	&__item-btn {
+		border-radius: 0.625rem;
+		border: rem(1) solid #eaebeb;
+		padding: 1.12rem 1.25rem;
+		display: flex;
+		align-items: center;
+		gap: rem(15);
+		cursor: pointer;
+		font-family: $fontfamily;
+		transition: border-color 0.3s ease;
+		min-height: rem(50);
+		font-size: rem(13);
+		@media (min-width: $md5) {
+			font-size: rem(16);
+			min-height: rem(56);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: darken($color: #eaebeb, $amount: 10);
+			}
+		}
+		&::before {
+			content: "";
+			width: 1.25rem;
+			height: 1.25rem;
+			flex-shrink: 0;
+			border-radius: 0.125rem;
+			background: #f1f2f2;
+			color: $accent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__submit {
+		align-content: center;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1 1 auto;
+		padding: rem(10) 0;
+		width: 100%;
+		.form__checkbox-text {
+			text-align: left;
+		}
+	}
+	// .quiz__subtitle
+	&__subtitle {
+		font-family: $fontfamily;
+		line-height: 150%;
+		font-size: rem(14);
+		margin-top: rem(15);
+		@media (min-width: $md4) {
+			margin-top: 1.25rem;
+			font-size: 1rem;
+		}
+	}
+	// .quiz__row
+	&__row {
+		display: flex;
+		gap: rem(15);
+		flex-direction: column;
+		width: 100%;
+		margin-top: rem(30);
+		margin-bottom: rem(15);
+		@media (min-width: $md3) {
+			margin-bottom: rem(25);
+			margin-top: 2.5rem;
+			justify-content: center;
+			flex-direction: row;
+			.form__control {
+				max-width: rem(235);
+				width: 100%;
+				flex-shrink: 0;
+			}
+			.btn {
+				width: 100%;
+				max-width: 13.75rem;
+				flex-shrink: 0;
+			}
+		}
+	}
+	// .quiz__bottom
+	&__bottom {
+		width: 100%;
+		display: flex;
+		gap: 2.5rem;
+		flex-direction: column;
+		@media (min-width: $md3) {
+			align-items: center;
+			flex-direction: row;
+		}
+	}
+	// .quiz__progress
+	&__progress {
+		flex: 1 1 auto;
+		margin-bottom: -1.5rem;
+	}
+	// .quiz__progress-bar
+	&__progress-bar {
+		display: block;
+		width: 100%;
+		border-radius: 0.5rem;
+		height: rem(8);
+		background-color: #f1f2f2;
+		background: #f1f2f2;
+
+		overflow: hidden;
+
+		&::-webkit-progress-bar {
+			background-color: #f1f2f2;
+		}
+
+		&::-webkit-progress-value {
+			background-color: $accent;
+
+			transition: width 0.3s ease-in-out;
+		}
+
+		&::-moz-progress-bar {
+			background-color: $accent;
+
+			transition: width 0.3s ease-in-out;
+		}
+
+		@supports (-ms-accelerator: true) or (-ms-ime-align: auto) {
+			color: $accent;
+			background-color: #f1f2f2;
+			border: none;
+			&[value]::-ms-fill {
+				background-color: $accent;
+			}
+		}
+
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		&[value="100"] {
+			&::-webkit-progress-value {
+				background-color: $accent;
+			}
+			&::-moz-progress-bar {
+				background-color: $accent;
+			}
+		}
+	}
+	// .quiz__progress-status
+	&__progress-status {
+		margin-top: 0.69rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 125%;
+	}
+	// .quiz__controls
+	&__controls {
+		display: flex;
+		gap: 1.25rem;
+		justify-content: space-between;
+		@media (min-width: $md5) {
+			margin-left: auto;
+		}
+	}
+	// .quiz__prev
+	&__prev {
+	}
+	// .quiz__next
+	&__next {
+	}
+}
+
+.description {
+	background: #fff;
+	color: #0f141e;
+	padding: 4rem 0 1.5rem;
+	@media (min-width: $md3) {
+		padding: 6.25rem 0 1.5rem;
+	}
+	// .description__container
+	&__container {
+	}
+	// .description__row
+	&__row {
+		display: grid;
+		gap: rem(20);
+		@media (min-width: $md5) {
+			gap: rem(30);
+		}
+		@media (min-width: $md3) {
+			gap: 2.5rem;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(60);
+			@media (min-width: $md5) {
+				margin-bottom: rem(70);
+			}
+			@media (min-width: $md3) {
+				margin-bottom: 6rem;
+			}
+		}
+	}
+	// .description__title
+	&__title {
+	}
+	// .desctiption__text
+	&__text {
+		line-height: 155%;
+		font-size: rem(14);
+		@media (min-width: $md5) {
+			font-size: 1rem;
+		}
+		& ul {
+			list-style: disc;
+			padding-left: 1.5em;
+			li {
+				&::marker {
+					font-size: 0.5em;
+				}
+			}
+		}
+	}
+}
