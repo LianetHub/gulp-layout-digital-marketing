@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Страница статьи'
+    })
+    <body class="light-bg">
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "background": "light"
+            })
+            <main class="page">
+                <section class="marketplace">
+                    <div class="marketplace__container">
+                        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__list-item">
+                                    <a href="/" class="breadcrumbs__list-link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs__list-item">
+                                    <a class="breadcrumbs__list-link active">Услуги</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <h1 class="marketplace__title title-lg">Все услуги</h1>
+                        <div class="marketplace__filters">
+                            <button type="button" class="marketplace__filter-btn btn btn-sm btn-primary icon-filter"><span class="pc-only">Все фильтры</span></button>
+                            <div class="marketplace__filter-dropdown dropdown">
+                                <button type="button" class="dropdown__button sort-btn icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                    <span class="dropdown__button-text">Тип услуги</span>
+                                </button>
+                                <div class="dropdown__body">
+                                    <div class="dropdown__list" id="mse2_sort">
+                                        <a href="#" data-sort="tv|service_type:default" data-dir="" class="dropdown__list-item sort">
+                                            📦 Базовое продвижение
+                                        </a>
+                                        <a href="#" data-sort="tv|service_type:target" data-dir="" class="dropdown__list-item sort">
+                                            🎯 Увеличение заявок и продаж
+                                        </a>
+                                        <a href="#" data-sort="tv|service_type:reputation" data-dir="" class="dropdown__list-item sort">
+                                            👥 Репутационные услуги
+                                        </a>
+                                        <a href="#" data-sort="tv|service_type:complex" data-dir="" class="dropdown__list-item sort">
+                                            🚀 Комплекс и стратегия
+                                        </a>
+                                        <a href="#" data-sort="tv|service_type:one-time" data-dir="" class="dropdown__list-item sort">
+                                            🧩 Разовые работы
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="marketplace__filter-dropdown dropdown">
+                                <button type="button" class="dropdown__button sort-btn icon-chevron" aria-expanded="false" aria-haspopup="true">
+                                    <span class="dropdown__button-text">Цель</span>
+                                </button>
+                                <div class="dropdown__body">
+                                    <div class="dropdown__list" id="mse2_sort2">
+                                        <a href="#" data-sort="tv|goal:traffic" data-dir="" class="dropdown__list-item sort">
+                                            📈 Увеличить трафик
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:leads" data-dir="" class="dropdown__list-item sort">
+                                            💬 Получать больше заявок
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:promote_services" data-dir="" class="dropdown__list-item sort">
+                                            💼 Продвигать услуги
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:promote_store" data-dir="" class="dropdown__list-item sort">
+                                            🛒 Продвигать интернет-магазин
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:reputation" data-dir="" class="dropdown__list-item sort">
+                                            📣 Укрепить репутацию
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:audit" data-dir="" class="dropdown__list-item sort">
+                                            📐 Нужен аудит и стратегия
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:test" data-dir="" class="dropdown__list-item sort">
+                                            🧪 Протестировать нишу
+                                        </a>
+                                        <a href="#" data-sort="tv|goal:launch" data-dir="" class="dropdown__list-item sort">
+                                            🆕 Только запускаю бизнес
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('./html/_filter.html')
+                            <form action="#" class="marketplace__search">
+                                <button type="submit" class="marketplace__search-btn icon-search"></button>
+                                <input type="text" name="s" class="form__control form__control--violet" placeholder="Поиск">
+                            </form>
+                        </div>
+                        <ul class="marketplace__list">
+                            @@loop('./html/templates/_marketplace-item.html', './html/json/marketplace.json')
+                        </ul>
+                    </div>
+                </section>
+                @@include('html/_lids-2.html', {})
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+
+            @@include('html/_js.html', {})
+    </body>
+</html>

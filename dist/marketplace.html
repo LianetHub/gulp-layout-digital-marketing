@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Страница статьи</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" itemprop="description" content="">
+	<meta name="keywords" itemprop="keywords" content="">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Страница статьи" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<!-- favicon -->
+	<!-- Open Graph  -->
+	<meta property="og:type" content="business.business">
+	<meta property="og:title" content="Digital-маркетинг для медицинских клиник">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="/OG.svg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="627">
+	<meta property="og:site_name" content="">
+	<meta property="og:locale" content="ru_RU">
+	<!-- Open Graph  -->
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250824124236">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20250824124236">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250824124236">
+	<!-- plugnis -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250824124236">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250824124236">
+</head>
+
+<body class="light-bg">
+	<section class="wrapper">
+		<header class="header">
+			<div class="header__container container-lg">
+				<a href="/" class="header__logo">
+					<img src="img/logo-black.svg" alt="Логотип">
+				</a>
+				<nav class="header__menu menu" aria-label="Меню в шапке">
+					<div class="menu__logo">
+						<img src="img/logo.svg" alt="Логотип">
+					</div>
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#cases" class="menu__link">Кейсы</a></li>
+						<li class="menu__item"><a href="#services" class="menu__link">Услуги</a></li>
+						<li class="menu__item"><a href="#team" class="menu__link">Команда</a></li>
+						<li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+					</ul>
+					<div class="menu__btns">
+						<a href="" class="menu__btn btn btn-primary icon-right-pixel">Написать в телеграм</a>
+						<a href="" class="menu__btn btn btn-secondary icon-phone">Позвонить</a>
+					</div>
+					<div class="menu__copy">© ID-маркетинг</div>
+				</nav>
+				<div class="header__actions">
+					<a href="" class="header__action icon-telegram"></a>
+					<a href="" class="header__action icon-whatsapp"></a>
+					<button type="button" class="header__menu-toggler icon-menu">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="marketplace">
+				<div class="marketplace__container">
+					<nav aria-label="Хлебные крошки" class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__list-item">
+								<a href="/" class="breadcrumbs__list-link">Главная</a>
+							</li>
+							<li class="breadcrumbs__list-item">
+								<a class="breadcrumbs__list-link active">Услуги</a>
+							</li>
+						</ul>
+					</nav>
+					<h1 class="marketplace__title title-lg">Все услуги</h1>
+					<div class="marketplace__filters">
+						<button type="button" class="marketplace__filter-btn btn btn-sm btn-primary icon-filter"><span class="pc-only">Все фильтры</span></button>
+						<div class="marketplace__filter-dropdown dropdown">
+							<button type="button" class="dropdown__button sort-btn icon-chevron" aria-expanded="false" aria-haspopup="true">
+								<span class="dropdown__button-text">Тип услуги</span>
+							</button>
+							<div class="dropdown__body">
+								<div class="dropdown__list" id="mse2_sort">
+									<a href="#" data-sort="tv|service_type:default" data-dir="" class="dropdown__list-item sort"> 📦 Базовое продвижение </a>
+									<a href="#" data-sort="tv|service_type:target" data-dir="" class="dropdown__list-item sort"> 🎯 Увеличение заявок и продаж </a>
+									<a href="#" data-sort="tv|service_type:reputation" data-dir="" class="dropdown__list-item sort"> 👥 Репутационные услуги </a>
+									<a href="#" data-sort="tv|service_type:complex" data-dir="" class="dropdown__list-item sort"> 🚀 Комплекс и стратегия </a>
+									<a href="#" data-sort="tv|service_type:one-time" data-dir="" class="dropdown__list-item sort"> 🧩 Разовые работы </a>
+								</div>
+							</div>
+						</div>
+						<div class="marketplace__filter-dropdown dropdown">
+							<button type="button" class="dropdown__button sort-btn icon-chevron" aria-expanded="false" aria-haspopup="true">
+								<span class="dropdown__button-text">Цель</span>
+							</button>
+							<div class="dropdown__body">
+								<div class="dropdown__list" id="mse2_sort2">
+									<a href="#" data-sort="tv|goal:traffic" data-dir="" class="dropdown__list-item sort"> 📈 Увеличить трафик </a>
+									<a href="#" data-sort="tv|goal:leads" data-dir="" class="dropdown__list-item sort"> 💬 Получать больше заявок </a>
+									<a href="#" data-sort="tv|goal:promote_services" data-dir="" class="dropdown__list-item sort"> 💼 Продвигать услуги </a>
+									<a href="#" data-sort="tv|goal:promote_store" data-dir="" class="dropdown__list-item sort"> 🛒 Продвигать интернет-магазин </a>
+									<a href="#" data-sort="tv|goal:reputation" data-dir="" class="dropdown__list-item sort"> 📣 Укрепить репутацию </a>
+									<a href="#" data-sort="tv|goal:audit" data-dir="" class="dropdown__list-item sort"> 📐 Нужен аудит и стратегия </a>
+									<a href="#" data-sort="tv|goal:test" data-dir="" class="dropdown__list-item sort"> 🧪 Протестировать нишу </a>
+									<a href="#" data-sort="tv|goal:launch" data-dir="" class="dropdown__list-item sort"> 🆕 Только запускаю бизнес </a>
+								</div>
+							</div>
+						</div>
+						<div class="filter ">
+							<form action="#" class="filter__content">
+								<div class="filter__header">
+									<div class="filter__title title">Фильтры</div>
+									<button type="button" aria-label="Закрыть фильтр" class="filter__close icon-cross"></button>
+								</div>
+								<div class="filter__body">
+									<button type="reset" class="filter__reset icon-cross-circle">Очистить фильтры</button>
+									<div class="filter__grid">
+										<div class="filter__grid-item ">
+											<select name="service_type" id="tv|service_type_0" class="select" data-title="Тип услуги">
+												<option value selected="selected">Не выбрано</option>
+												<option value="bazovoe-prodvizhenie">📦 Базовое продвижение</option>
+												<option value="uvelichenie-zayavok">🎯 Увеличение заявок и продаж</option>
+												<option value="reputatsionnye-uslugi">👥 Репутационные услуги</option>
+												<option value="kompleks-i-strategiya">🚀 Комплекс и стратегия</option>
+												<option value="razovye-raboty">🧩 Разовые работы</option>
+											</select>
+										</div>
+										<div class="filter__grid-item ">
+											<select name="goal" id="tv|goal_0" class="select" data-title="Цель">
+												<option value selected="selected">Не выбрано</option>
+												<option value="uvelichit-trafik">📈 Увеличить трафик</option>
+												<option value="poluchat-bolshe-zayavok">💬 Получать больше заявок</option>
+												<option value="prodvigat-uslugi">💼 Продвигать услуги</option>
+												<option value="prodvigat-internet-magazin">🛒 Продвигать интернет-магазин</option>
+												<option value="ukrepit-reputatsiyu">📣 Укрепить репутацию</option>
+												<option value="nuzhen-audit-i-strategiya">📐 Нужен аудит и стратегия</option>
+												<option value="protestirovat-nishu">🧪 Протестировать нишу</option>
+												<option value="tolko-zapuskayu-biznes">🆕 Только запускаю бизнес</option>
+											</select>
+										</div>
+										<div class="filter__grid-item ">
+											<select name="budget" id="tv|budget_0" class="select" data-title="Бюджет">
+												<option value selected="selected">Не выбрано</option>
+												<option value="do-30-tys-rub">до 30 тыс.руб</option>
+												<option value="30-100-tys-rub">30–100 тыс.руб</option>
+												<option value="100-plus-tys-rub">100+ тыс.руб</option>
+											</select>
+										</div>
+										<div class="filter__grid-item ">
+											<select name="format" id="tv|format_0" class="select" data-title="Формат">
+												<option value selected="selected">Не выбрано</option>
+												<option value="konsultatsiya">Консультация</option>
+												<option value="vedenie">Ведение</option>
+												<option value="nastroyka">Настройка</option>
+												<option value="razrabotka">Разработка</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="filter__bottom">
+									<button type="submit" class="filter__submit btn btn-primary btn-fullwidth">Показать</button>
+								</div>
+							</form>
+						</div>
+						<form action="#" class="marketplace__search">
+							<button type="submit" class="marketplace__search-btn icon-search"></button>
+							<input type="text" name="s" class="form__control form__control--violet" placeholder="Поиск">
+						</form>
+					</div>
+					<ul class="marketplace__list">
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-4.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Технический <br> аудит</span>
+								<span class="marketplace__card-description">Проверка технических настроек&nbsp;сайта. В рамках технического seo-аудита сайта проверяется: наличие ошибок в&nbsp;коде страниц сайта.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-2-bottom.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Проверка <br> индексации</span>
+								<span class="marketplace__card-description">Проверка индексации сайта поисковиками Yandex и Google,&nbsp;скорости загрузки, мобильной версии.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-2-diagonal.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Сбор семантического ядра</span>
+								<span class="marketplace__card-description">Чем правильнее сформировано&nbsp;СЯ, тем выше страницы ресурса будут отображаться поисковиком.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-3-right.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Подбор <br> 100+ запросов</span>
+								<span class="marketplace__card-description">Правильный подбор ключевых слов привлекает целевую аудиторию.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-3.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Работа <br> с отзывами</span>
+								<span class="marketplace__card-description">Размещение отзывов на сайте и&nbsp;внешних площадках (Яндекс,&nbsp;Google).</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-2-diagonal.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Ежемесячные <br> отчеты</span>
+								<span class="marketplace__card-description">Чем правильнее сформировано&nbsp;СЯ, тем выше страницы ресурса будут отображаться поисковиком.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-3-top.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Анализ позиций, трафика, <br> рекомендации</span>
+								<span class="marketplace__card-description">Проверка позиций сайта помогает понять, насколько эффективно работает ваше SEO-продвижение.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-2-left.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Создание сайтов по&nbsp;стандартам МинЗдрав</span>
+								<span class="marketplace__card-description">Разрабатываем SEO-оптимизированные сайты, соответствующие требованиям Минздрава и повышающие доверие пациентов.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-1.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Контекстная реклама</span>
+								<span class="marketplace__card-description">Настраиваем рекламные кампании для привлечения горячих лидов с минимальной стоимостью заявки.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-3.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Продвижение в&nbsp;поисковиках (SEO)</span>
+								<span class="marketplace__card-description">Повышаем видимость сайта в&nbsp;поиске, обеспечивая стабильный поток органического трафика.</span>
+							</a>
+						</li>
+						<li class="marketplace__card">
+							<a href="" class="marketplace__card-item">
+								<span class="marketplace__card-icon">
+									<img src="img/icons/grid-3-top.svg" alt="Иконка">
+								</span>
+								<span class="marketplace__card-title title-sm">Email-маркетинг</span>
+								<span class="marketplace__card-description">Выстраиваем коммуникацию с&nbsp;клиентами, увеличивая повторные продажи и удержание.</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="lids">
+				<div class="lids__container">
+					<div class="lids__content">
+						<span class="lids__label lids__label--top icon-fire">Первые рекомендации — через 24 ч</span>
+						<div class="lids__main">
+							<h2 class="lids__title title">Готовы увеличить поток пациентов?</h2>
+							<div class="lids__labels">
+								<span class="lids__label lids__label--violet icon-smile">Без спама</span>
+								<span class="lids__label lids__label--violet lids__label--bottom icon-eye-stroke">Конфиденциально</span>
+							</div>
+						</div>
+						<form action="#" class="lids__form form" id="contacts">
+							<div class="lids__form-row">
+								<input type="text" name="name" class="form__control" placeholder="Имя">
+								<input type="text" name="url" class="form__control" placeholder="URL-сайта">
+								<input type="tel" name="tel" class="form__control" placeholder="+7 (999) 999-99-99">
+								<button type="submit" class="btn btn-primary">Получить бесплатный аудит</button>
+							</div>
+							<label class="form__checkbox">
+								<input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+								<span class="form__checkbox-text">Я согласен с <a href="">политикой конфиденциальности</a></span>
+							</label>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__header">
+					<div class="footer__logo">
+						<img src="img/logo-black.svg" alt="logo">
+					</div>
+					<div class="footer__column">
+						<div class="footer__caption">офис</div>
+						<a href="tel:+79999999999" class="footer__phone">+ 7 (999) 999-99-99</a>
+						<address class="footer__address">г. Москва, ул. Улица, д.12</address>
+					</div>
+					<div class="footer__column">
+						<div class="footer__caption">Навигация</div>
+						<ul class="footer__menu">
+							<li>
+								<a href="#cases">Кейсы</a>
+							</li>
+							<li>
+								<a href="#services">Услуги</a>
+							</li>
+							<li>
+								<a href="#team">Команда</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<div class="footer__caption">соц.сети</div>
+						<div class="footer__socials">
+							<a href="" class="footer__social icon-whatsapp"></a>
+							<a href="" class="footer__social icon-telegram"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copy">© ID-маркетинг, 2025 </div>
+					<a href="" class="footer__privacy">Политика конфиденциальности</a>
+					<a href="" class="footer__prod">Разработка дизайна сайта</a>
+				</div>
+			</div>
+		</footer>
+		<div id="callback" class="popup">
+			<div class="popup__body">
+				<button type="button" class="popup__close" data-fancybox-close></button>
+				<h3 class="popup__title">Оставить заявку</h3>
+				<p class="popup__subtitle"> Оставьте свои данные, мы свяжемся с вами в ближайшее время </p>
+				<form action="#" class="popup__form">
+					<input type="text" name="name" class="form__control" placeholder="Имя">
+					<input type="tel" name="phone" class="form__control" placeholder="+ 7 (999) 999-99-99">
+					<label class="form__checkbox">
+						<input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+						<span class="form__checkbox-text"> Я согласен(-ен) c <a href="">политикой конфиденциальности</a>
+						</span>
+					</label>
+					<button class="form__btn btn btn-primary">Отправить →</button>
+				</form>
+				<div class="form__success" style="display: none;"> Спасибо! <br> Данные успешно отправлены </div>
+			</div>
+		</div> <!-- plugnis -->
+		<script src="js/libs/swiper-bundle.min.js?_v=20250824124236"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250824124236"></script>
+		<script src="js/libs/intlTelInput.min.js?_v=20250824124236"></script>
+		<script src="js/libs/gsap.min.js?_v=20250824124236"></script>
+		<script src="js/libs/ScrollTrigger.min.js?_v=20250824124236"></script>
+		<!-- plugnis -->
+		<script src="js/app.min.js?_v=20250824124236"></script>
+</body>
+
+</html>

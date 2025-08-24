@@ -13,6 +13,13 @@
                             font-style: normal;
                         }
 @font-face {
+                            font-family: 'Involve';
+                            font-display: swap;
+                            src: url("../fonts/Involve-SemiBold.woff2") format("woff2"), url("../fonts/Involve-SemiBold.woff") format("woff");
+                            font-weight: 600;
+                            font-style: normal;
+                        }
+@font-face {
                             font-family: 'PTRootUI';
                             font-display: swap;
                             src: url("../fonts/PTRootUI-Bold.woff2") format("woff2"), url("../fonts/PTRootUI-Bold.woff") format("woff");

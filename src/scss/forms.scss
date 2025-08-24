@@ -12,6 +12,18 @@
 		border-radius: rem(6);
 		font-size: 0.875rem;
 		line-height: 150%;
+		&--violet {
+			border: rem(1) solid #eaebeb;
+			color: #0f141e;
+			font-weight: 600;
+			background: transparent;
+			padding: 0.4375rem 0.9375rem 0.4375rem 2.3125rem;
+			caret-color: #d7b4ff;
+			&::placeholder {
+				opacity: 1;
+				color: #d7b4ff;
+			}
+		}
 		&::placeholder {
 			opacity: 0.3;
 			color: currentColor;
@@ -182,6 +194,14 @@
 	&.btn-black {
 		background: #0f141e;
 		color: #fff;
+	}
+
+	&.btn-sm {
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 125%;
+		padding: rem(10) rem(12);
+		gap: rem(5);
 	}
 
 	&.btn-fullwidth {
