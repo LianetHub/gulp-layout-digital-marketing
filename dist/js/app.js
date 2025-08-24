@@ -102,6 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+        if (e.target.closest('.roadmap__item-title')) {
+            e.target.closest('.roadmap__item-title').classList.toggle('active');
+            e.target.closest('.roadmap__item-title').nextElementSibling.slideToggle()
+        }
+
         // Табы
         const tabBtn = e.target.closest('.cases__tab-btn');
         if (tabBtn) {
@@ -390,8 +395,6 @@ document.addEventListener("DOMContentLoaded", () => {
         input.addEventListener('input', onPhoneInput);
         input.addEventListener('paste', onPhonePaste);
     });
-
-
 
 
     // animation

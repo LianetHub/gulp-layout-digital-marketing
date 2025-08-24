@@ -178,6 +178,18 @@
 			}
 		}
 	}
+	&.btn-primary-outline {
+		background: #9335ff;
+		border: rem(1) solid #9335ff;
+		color: #9335ff;
+		background: transparent;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #9335ff;
+				color: #fff;
+			}
+		}
+	}
 
 	&.btn-secondary {
 		border: rem(1) solid #fff;
@@ -187,6 +199,16 @@
 			&:hover {
 				background: #fff;
 				color: #0f141e;
+			}
+		}
+	}
+
+	&.btn-white {
+		background: #fff;
+		color: #9335ff;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($color: #fff, $alpha: 0.7);
 			}
 		}
 	}

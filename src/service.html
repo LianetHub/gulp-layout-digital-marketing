@@ -10,85 +10,94 @@
             })
             <main class="page">
                 <section class="promo">
-                    <div class="promo__container container-lg">
+                    <div class="promo__container">
                         <div class="promo__body">
                             <div class="promo__offer">
-                                <h1 class="promo__title title-xl">Digital-маркетинг для&nbsp;медицинских клиник</h1>
-                                <p class="promo__subtitle">Приведем пациентов, увеличим продажи и снизим стоимость лида</p>
+                                <nav aria-label="Хлебные крошки" class="breadcrumbs">
+                                    <ul class="breadcrumbs__list">
+                                        <li class="breadcrumbs__list-item">
+                                            <a href="/" class="breadcrumbs__list-link">Главная</a>
+                                        </li>
+                                        <li class="breadcrumbs__list-item">
+                                            <a class="breadcrumbs__list-link active">SEO-продвижение</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <h1 class="promo__title title-lg">
+                                    SEO для стоматологий
+                                    и&nbsp;клиник — <span>стабильный поток пациентов</span> из поиска
+                                </h1>
+                                <p class="promo__subtitle">Выведите сайт в ТОП-10 Яндекса и Google. Привлекайте пациентов, которые готовы лечиться, а не просто сравнивают цены</p>
                                 <div class="promo__btns">
-                                    <a href="" class="promo__btn btn btn-primary icon-right-pixel">Написать в телеграм</a>
+                                    <a href="" class="promo__btn btn btn-primary icon-right-pixel">Бесплатный аудит сайта</a>
                                     <a href="" class="promo__btn btn btn-secondary icon-phone">Позвонить</a>
                                 </div>
                             </div>
-                            <div class="promo__video">
-                                <div class="promo__video-wrapper">
-                                    <div class="video-area">
-                                        <video id="promo-video" src="./files/home4-contact-video2.mp4" autoplay muted loop playsinline></video>
-                                    </div>
+                            <div class="promo__image">
+                                <span class="promo__image-label">Бесплатно за 2ч</span>
+                                <img src="@img/service.jpg" class="cover-image" alt="Промо фото">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="why">
+                    <div class="why__container">
+                        <div class="why__main">
+                            <h2 class="why__title title">
+                                Почему вашей клинике
+                                необходимо <span>SEO-продвижение?</span>
+                            </h2>
+                            <ul class="why__list">
+                                <li class="why__item">
+                                    <div class="why__item-caption title-sm">75% пациентов ищут <br> врачей через поиск</div>
+                                    <div class="why__item-desc">Без SEO ваша клиника теряет потенциальных клиентов</div>
+                                </li>
+                                <li class="why__item">
+                                    <div class="why__item-caption title-sm">SEO дешевле контекстной рекламы в&nbsp;долгосрочной перспективе</div>
+                                    <div class="why__item-desc">После выхода в ТОП платите только за поддержку</div>
+                                </li>
+                                <li class="why__item">
+                                    <div class="why__item-caption title-sm">Конкуренты уже в ТОПе</div>
+                                    <div class="why__item-desc">Если вас нет на первой странице выдачи, пациенты&nbsp;записываются к ним</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="why__side">
+                            <div class="why__image">
+                                <img src="@img/why.jpg" class="cover-image" alt="Фото клиники">
+                            </div>
+                            <form action="#" class="why__form">
+                                <div class="why__form-title title-sm">Узнайте, сколько пациентов вы теряете</div>
+                                <div class="why__form-fields">
+                                    <input type="text" name="url" class="form__control" placeholder="Ссылка на ваш сайт">
+                                    <input type="tel" name="tel" class="form__control" placeholder="+7 (999) 999-99-99">
                                 </div>
-                            </div>
-                        </div>
-                        <ul class="promo__list">
-                            <li>Стоимость лида до 700₽</li>
-                            <li>Ежемесячно >2000 целевых лидов</li>
-                            <li>Средний чек 600 тыс ₽ – 1 млн ₽</li>
-                            <li>Приход 2-3 тыс. ₽</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="promotion">
-                    <div class="promotion__container">
-                        <h2 class="promotion__title title">
-                            <span>Системное продвижение:</span>
-                            вникаем в специфику бизнеса, анализируем&nbsp;ЦА и&nbsp;выстраиваем стратегию
-                        </h2>
-                        <div class="promotion__desc">
-                            <p>Вся команда от маркетологов до разработчиков работает в тесном взаимодействии с вами на всех этапах проекта. <br> Такой интегрированный подход позволяет не только генерировать лиды, но и превращать их в реальные продажи.</p>
-                            <p>Мы систематически оптимизируем процессы и применяем только проверенные инструменты для достижения стабильного результата, независимо от ниши.</p>
-                        </div>
-                        <div class="promotion__visual">
-                            <div class="promotion__visual-block">
-                                <img src="@img/funnel.png" alt="Воронка">
-                                <ul class="promotion__visual-list">
-                                    <li class="promotion__visual-item">
-                                        <div class="promotion__visual-title">250 000 ₽</div>
-                                        <div class="promotion__visual-text">Бюджет проекта</div>
-                                    </li>
-                                    <li class="promotion__visual-item">
-                                        <div class="promotion__visual-title">83 740</div>
-                                        <div class="promotion__visual-text">Трафик</div>
-                                    </li>
-                                    <li class="promotion__visual-item">
-                                        <div class="promotion__visual-title">6 647</div>
-                                        <div class="promotion__visual-text">Обращения</div>
-                                    </li>
-                                    <li class="promotion__visual-item">
-                                        <div class="promotion__visual-title">1 850</div>
-                                        <div class="promotion__visual-text">Клиенты</div>
-                                    </li>
-                                    <li class="promotion__visual-item">
-                                        <div class="promotion__visual-title">730</div>
-                                        <div class="promotion__visual-text">Повторные заказы</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="promotion__visual-total">
-                                <div class="promotion__visual-total-value">1 350 800 ₽</div>
-                                <div class="promotion__visual-total-text">прибыль</div>
-                            </div>
-                        </div>
-                        <div class="promotion__hint">
-                            <div class="promotion__hint-text">Пройди квиз и получи маркетинговую оценку бизнеса <span>→</span></div>
-                            <a href="" class="promotion__hint-btn btn btn-primary icon-right-pixel">Пройти квиз</a>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="privacy" class="form__checkbox-input hidden" hidden>
+                                    <span class="form__checkbox-text">Я согласен с <a href="">политикой конфиденциальности</a></span>
+                                </label>
+                                <button type="submit" class="btn btn-white">Отправить заявку →</button>
+                            </form>
                         </div>
                     </div>
                 </section>
-                <section id="cases" class="cases">
+                <section class="roadmap">
+                    <div class="roadmap__container">
+                        <h2 class="roadmap__title title">SEO-продвижение под ключ <br> — от аудита до роста пациентов</h2>
+                        <div class="roadmap__body">
+                            <ol class="roadmap__list">
+                                @@loop('./html/templates/_roadmap-item.html', './html/json/roadmap.json')
+                            </ol>
+                            <ol class="roadmap__list" start="6">
+                                @@loop('./html/templates/_roadmap-item.html', './html/json/roadmap-2.json')
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section class="cases cases--white">
                     <div class="cases__container">
                         <h2 class="cases__title title">
-                            Кейсы: <br>
-                            <span>создаем продажи,</span>
-                            а&nbsp;не&nbsp;просто заявки
+                            Реальные результаты для клиник
                         </h2>
                         <div class="cases__tabs">
                             <div class="cases__tabs-btns swiper">
@@ -113,7 +122,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image cases__card-image--large">
                                                     <img src="@img/cases/01.png" alt="case">
@@ -131,7 +140,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -149,7 +158,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -167,7 +176,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/03.svg" alt="case">
@@ -189,7 +198,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image cases__card-image--large">
                                                     <img src="@img/cases/01.png" alt="case">
@@ -207,7 +216,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -225,7 +234,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -243,7 +252,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/03.svg" alt="case">
@@ -265,7 +274,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image cases__card-image--large">
                                                     <img src="@img/cases/01.png" alt="case">
@@ -283,7 +292,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -301,7 +310,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -319,7 +328,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/03.svg" alt="case">
@@ -341,7 +350,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image cases__card-image--large">
                                                     <img src="@img/cases/01.png" alt="case">
@@ -359,7 +368,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -377,7 +386,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/02.svg" alt="case">
@@ -395,7 +404,7 @@
                                                         <li>Стоимость целевого лида&nbsp;820₽</li>
                                                         <li>>20 продаж со средним чеком 678 000₽</li>
                                                     </ul>
-                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-secondary icon-right-pixel">Подбробнее</a>
+                                                    <a href="#callback" data-fancybox class="cases__card-btn btn btn-primary-outline icon-right-pixel">Подбробнее</a>
                                                 </div>
                                                 <div class="cases__card-image">
                                                     <img src="@img/cases/03.svg" alt="case">
@@ -409,10 +418,13 @@
                         <a href="#callback" data-fancybox class="cases__btn btn btn-primary icon-telegram-alternate">Бесплатная консультация</a>
                     </div>
                 </section>
-                <section class="complex">
+                <section class="complex complex--white">
                     <div class="complex__container">
                         <div class="complex__header">
-                            <h2 class="complex__title title">Комплексный <br> digital-маркетинг</h2>
+                            <div class="complex__header-column">
+                                <h2 class="complex__title title">Комплексное продвижение <br> <span>без скрытых платежей</span></h2>
+                                <p class="complex__subtitle">Что входит в SEO?</p>
+                            </div>
                             <div class="complex__controls">
                                 <button type="button" class="complex__prev swiper-button-prev"></button>
                                 <button type="button" class="complex__next swiper-button-next"></button>
@@ -424,199 +436,75 @@
                                     <div class="complex__slide-icon">
                                         <img src="@img/icons/grid-4.svg" alt="иконка">
                                     </div>
-                                    <h3 class="complex__slide-title title-sm">Создание сайтов по стандартам МинЗдрав</h3>
-                                    <p class="complex__slide-desc">Разрабатываем SEO-оптимизированные сайты, соответствующие требованиям Минздрава и повышающие доверие пациентов</p>
+                                    <h3 class="complex__slide-title title-sm">Технический <br> аудит</h3>
+                                    <p class="complex__slide-desc">Проверка технических настроек&nbsp;сайта. В рамках технического seo-аудита сайта проверяется: наличие ошибок в&nbsp;коде страниц сайта.</p>
                                 </div>
                                 <div class="complex__slide swiper-slide">
                                     <div class="complex__slide-icon">
-                                        <img src="@img/icons/grid-3.svg" alt="иконка">
+                                        <img src="@img/icons/grid-2-bottom.svg" alt="иконка">
                                     </div>
-                                    <h3 class="complex__slide-title title-sm">Контекстная реклама</h3>
-                                    <p class="complex__slide-desc">Настраиваем рекламные кампании для привлечения горячих лидов с минимальной стоимостью заявки</p>
+                                    <h3 class="complex__slide-title title-sm">Проверка <br> индексации</h3>
+                                    <p class="complex__slide-desc">Проверка индексации сайта поисковиками Yandex и Google,&nbsp;скорости загрузки, мобильной версии.</p>
                                 </div>
                                 <div class="complex__slide swiper-slide">
                                     <div class="complex__slide-icon">
-                                        <img src="@img/icons/grid-2.svg" alt="иконка">
+                                        <img src="@img/icons/grid-2-diagonal.svg" alt="иконка">
                                     </div>
-                                    <h3 class="complex__slide-title title-sm">Продвижение в&nbsp;поисковиках (SEO)</h3>
-                                    <p class="complex__slide-desc">Повышаем видимость сайта в поиске, обеспечивая стабильный поток органического трафика</p>
+                                    <h3 class="complex__slide-title title-sm">Сбор семантического ядра</h3>
+                                    <p class="complex__slide-desc">Чем правильнее сформировано&nbsp;СЯ, тем выше страницы ресурса будут отображаться поисковиком.</p>
                                 </div>
                                 <div class="complex__slide swiper-slide">
                                     <div class="complex__slide-icon">
-                                        <img src="@img/icons/grid-1.svg" alt="иконка">
+                                        <img src="@img/icons/grid-3-right.svg" alt="иконка">
                                     </div>
-                                    <h3 class="complex__slide-title title-sm">Email-маркетинг</h3>
-                                    <p class="complex__slide-desc">Выстраиваем коммуникацию с клиентами, увеличивая повторные продажи и удержание</p>
+                                    <h3 class="complex__slide-title title-sm">Подбор <br> 100+ запросов</h3>
+                                    <p class="complex__slide-desc">Правильный подбор ключевых слов привлекает целевую аудиторию.</p>
                                 </div>
                             </div>
                         </div>
                         <a href="#callback" data-fancybox class="complex__btn btn btn-primary icon-right-pixel">Оставить заявку</a>
                     </div>
                 </section>
-                <section id="services" class="projects">
-                    <div class="projects__container">
-                        <div class="projects__header">
-                            <h2 class="projects__title title">Работаем как с крупными, <br> так и с небольшими проектами</h2>
-                            <div class="projects__controls">
-                                <button type="button" class="projects__prev swiper-button-prev"></button>
-                                <button type="button" class="projects__next swiper-button-next"></button>
-                            </div>
-                        </div>
-                        <div class="projects__slider swiper">
-                            <div class="swiper-wrapper">
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">До 5 профессиональных директологов на каждом проекте</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/01.jpg" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">Создание до 6 лендингов для SEO и лидогенерации</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/02.png" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">100% интеграция с&nbsp;вашей&nbsp;CRM-системой и&nbsp;телефонией</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/03.jpg" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">До 5 профессиональных директологов на каждом проекте</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/01.jpg" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">Создание до 6 лендингов для SEO и лидогенерации</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/02.png" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                                <div class="projects__slide swiper-slide">
-                                    <div class="projects__slide-title title-sm">100% интеграция с&nbsp;вашей&nbsp;CRM-системой и&nbsp;телефонией</div>
-                                    <div class="projects__slide-image">
-                                        <img src="@img/projects/03.jpg" class="cover-image" alt="Фото">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="tariff">
-                    <div class="tariff__container">
-                        <div class="tariff__header">
-                            <div class="tariff__icon">
-                                <img src="@img/icons/rocket.svg" alt="Иконка">
-                            </div>
-                            <h2 class="tariff__title title">Выбирай тариф — и включай продажи на максимум</h2>
-                            <p class="tariff__subtitle">Хотите просто протестировать гипотезу или загрузить отдел продаж под завязку? У нас есть решение!</p>
-                        </div>
-                        <div class="tariff__slider swiper">
-                            <ul class="swiper-wrapper">
-                                <li class="tariff__item swiper-slide">
-                                    <div class="tariff__item-header">
-                                        <div class="tariff__item-icon">
-                                            <img src="@img/icons/energy.svg" alt="Иконка">
-                                        </div>
-                                        <div class="tariff__item-title title-sm">
-                                            Быстрый старт
-                                        </div>
-                                    </div>
-                                    <div class="tariff__item-price">от 50 000 ₽</div>
-                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
-                                    <ul class="tariff__item-list">
-                                        <li>Лендинг</li>
-                                        <li>Реклама в Яндекс.Директ</li>
-                                        <li>Настройка аналитики и CRM</li>
-                                    </ul>
-                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
-                                </li>
-                                <li class="tariff__item swiper-slide">
-                                    <div class="tariff__item-header">
-                                        <div class="tariff__item-icon">
-                                            <img src="@img/icons/atom.svg" alt="Иконка">
-                                        </div>
-                                        <div class="tariff__item-title title-sm">
-                                            Стабильность
-                                        </div>
-                                    </div>
-                                    <div class="tariff__item-price">от 100 000 ₽</div>
-                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
-                                    <ul class="tariff__item-list">
-                                        <li>Многостраничный сайт</li>
-                                        <li>Реклама в Яндекс.Директ</li>
-                                        <li>Настройка аналитики и CRM</li>
-                                        <li>SEO-продвижение</li>
-                                        <li>Сквозная аналитика</li>
-                                    </ul>
-                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
-                                </li>
-                                <li class="tariff__item swiper-slide">
-                                    <div class="tariff__item-header">
-                                        <div class="tariff__item-icon">
-                                            <img src="@img/icons/crown-highlight.svg" alt="Иконка">
-                                        </div>
-                                        <div class="tariff__item-title title-sm">
-                                            Масштаб
-                                        </div>
-                                    </div>
-                                    <div class="tariff__item-price">от 150 000 ₽</div>
-                                    <p class="tariff__item-desc">Протестируем нишу, запустим лиды, поймем что работает на результат</p>
-                                    <ul class="tariff__item-list">
-                                        <li>Многостраничный сайт</li>
-                                        <li>Реклама в соц.сетях, Яндекс.Директ</li>
-                                        <li>Настройка CRM</li>
-                                        <li>SEO-продвижение</li>
-                                        <li>Сквозная аналитика</li>
-                                        <li>Команда под проект</li>
-                                        <li>Сопровождаем от клика до&nbsp;сделки</li>
-                                    </ul>
-                                    <a href="" class="tariff__item-btn btn btn-primary btn-fullwidth">Выбрать тариф</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                <section id="team" class="team">
+                <section class="team">
                     <div class="team__container">
-                        <h2 class="team__title  title">В команде сертифицированные специалисты <span>Яндекс, Google, Click.ru</span> </h2>
+                        <h2 class="team__title team__title--large title">ID-маркетинг — эксперты <span>в SEO для медицины</span></h2>
                         <div class="team__body">
                             <ul class="team__benefits">
                                 <li class="team__benefit">
                                     <div class="team__benefit-icon">
+                                        <img src="@img/icons/heart-beat.svg" alt="иконка">
+                                    </div>
+                                    <div class="team__benefit-caption title-sm">Специализация на стоматологиях и клиниках</div>
+                                    <div class="team__benefit-title">Знаем, как продвигать имплантацию, эстетическую стоматологию, сложное лечение</div>
+                                </li>
+                                <li class="team__benefit">
+                                    <div class="team__benefit-icon">
                                         <img src="@img/icons/crown.svg" alt="иконка">
                                     </div>
-                                    <div class="team__benefit-title">Опыт каждого специалиста >20 лет</div>
+                                    <div class="team__benefit-caption title-sm">Работаем на результат</div>
+                                    <div class="team__benefit-title">Прозрачные KPI: рост трафика, позиций, заявок</div>
                                 </li>
                                 <li class="team__benefit">
                                     <div class="team__benefit-icon">
-                                        <img src="@img/icons/mind.svg" alt="иконка">
+                                        <img src="@img/icons/circles.svg" alt="иконка">
                                     </div>
-                                    <div class="team__benefit-title">MBA по маркетингу</div>
+                                    <div class="team__benefit-caption title-sm">Без шаблонных решений</div>
+                                    <div class="team__benefit-title">Индивидуальная стратегия для каждой клиники</div>
                                 </li>
                                 <li class="team__benefit">
                                     <div class="team__benefit-icon">
-                                        <img src="@img/icons/education.svg" alt="иконка">
+                                        <img src="@img/icons/expirience.svg" alt="иконка">
                                     </div>
-                                    <div class="team__benefit-title">Высшее образование в Digital-marketing</div>
-                                </li>
-                                <li class="team__benefit">
-                                    <div class="team__benefit-icon">
-                                        <img src="@img/icons/handshake.svg" alt="иконка">
-                                    </div>
-                                    <div class="team__benefit-title">Партнеры Яндекс, Google, Click.ru</div>
+                                    <div class="team__benefit-caption title-sm">Опыт каждого специалиста >20 лет</div>
+                                    <div class="team__benefit-title">Команда из опытных специалистов с высшим образованием в Digital-marketing</div>
                                 </li>
                             </ul>
                             @@include('./html/_partners-block.html')
                         </div>
                     </div>
                 </section>
-                @@include('html/_lids.html', {
-                "hasBlog":true,
+                @@include('html/_lids-2.html', {
                 "hasFaq": true,
-                "hasDecor": true
                 })
             </main>
             @@include('html/_footer.html', {})

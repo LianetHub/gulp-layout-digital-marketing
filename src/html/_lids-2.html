@@ -1,5 +1,8 @@
 <section class="lids">
     <div class="lids__container">
+        @@if(typeof hasFaq !== 'undefined' && hasFaq === true) {
+        @@include('./_faq.html')
+        }
         <div class="lids__content">
             <span class="lids__label lids__label--top icon-fire">Первые рекомендации — через 24 ч</span>
             <div class="lids__main">
